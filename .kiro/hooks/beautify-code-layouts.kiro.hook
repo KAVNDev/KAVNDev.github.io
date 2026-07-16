@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Beautify Code Layouts",
+  "description": "Before writing code, reminds the agent to beautify layouts, ensure proper alignment, follow up-to-date standards, and apply latest best practices for clean, polished, production-ready code.",
+  "version": "1",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Before writing this code, ensure the output is beautifully formatted and follows the latest standards. Apply these principles: 1) Use consistent indentation and spacing — align properties, attributes, and blocks cleanly. 2) Follow the latest best practices and conventions for the language/framework being used (e.g., modern CSS layout techniques like Flexbox/Grid, semantic HTML5, modern React patterns, etc.). 3) Structure layouts logically — group related elements, use clear hierarchy, and maintain readable flow. 4) Apply proper naming conventions (BEM for CSS, camelCase/PascalCase as appropriate). 5) Ensure responsive design principles where applicable. 6) Use modern syntax and APIs — avoid deprecated patterns. 7) Keep visual consistency — balanced whitespace, aligned attributes, and organized imports/declarations. The goal is polished, professional code that looks as good in the editor as it does in the browser."
+  }
+}

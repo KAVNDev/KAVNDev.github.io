@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Efficient Quality Code",
+  "description": "Before writing code, reminds the agent to minimize credit usage (fewer iterations, less back-and-forth) while maximizing code quality by writing correct, complete, and well-structured code on the first attempt.",
+  "version": "1",
+  "when": {
+    "type": "preToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Before writing this code, ensure you are minimizing credit usage while maximizing quality. Follow these principles: 1) Write correct, complete code on the first attempt — avoid partial implementations that require follow-up edits. 2) Think before you write — plan the full solution mentally before producing output. 3) Avoid unnecessary iterations — do not write placeholder code that you will immediately replace. 4) Keep code clean, idiomatic, and well-structured so it does not need reformatting later. 5) Only write what is needed — no over-engineering or speculative features. The goal is high-quality code delivered efficiently in as few tool calls as possible."
+  }
+}

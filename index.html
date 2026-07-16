@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__container container" aria-label="Main navigation">
+      <a href="#home" class="navbar__logo">Portfolio<span class="navbar__logo-dot">.</span></a>
+      <button
+        class="navbar__toggle"
+        id="navToggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <span class="navbar__hamburger"></span>
+      </button>
+      <ul class="navbar__menu" id="navMenu">
+        <li><a href="#home" class="navbar__link active">Home</a></li>
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#portfolio" class="navbar__link">Portfolio</a></li>
+        <li><a href="#resume" class="navbar__link">Resume</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section class="hero section" id="home">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">KIAN ANDREI V. NAIG</h1>
+          <h2 class="hero__title">Support Programmer</h2>
+          <p class="hero__description">
+              A Support Programmer skilled in C#, .NET, and SQL Server, specializing in root-cause debugging, maintaining backend data integrity, and translating complex technical solutions into clear, user-centered answers.
+          </p>
+          <div class="hero__actions">
+            <a href="#portfolio" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+          </div>
+          <div class="hero__social">
+            <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hero__social-link">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVFjBhA9uR2iRUoDH9VmqNA%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero__social-link">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="hero__social-link">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <div class="hero__avatar">
+            <span class="hero__avatar-placeholder">YN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <p class="section__subtitle">
+          Get to know my background, skills, and what drives me as a developer.
+        </p>
+        <div class="about__grid">
+          <div class="about__story">
+            <h3 class="about__heading">About Me</h3>
+            <p class="about__text">
+                Support Programmer with hands-on experience in C#, .NET, SQL Server, and JavaScript, focused on system maintenance, debugging, 
+                and backend support for student information systems and internal applications. 
+                Skilled in writing, debugging, and optimizing stored procedures, resolving production issues, and safeguarding data integrity across day-to-day operations. 
+                Experienced in tracing complex bugs to their root cause — including faulty data inserts, missing validations, broken stored procedures, 
+                and sync issues — then implementing fixes that prevent recurrence. Comfortable working across both frontend and backend layers to diagnose 
+                and resolve issues efficiently. Communicates technical solutions clearly to non-technical users 
+                including students, staff, and teachers, translating complex fixes into simple, understandable language. 
+                Collaborates effectively within small teams, regularly coordinates with senior developers on escalated issues, 
+                and proactively seeks to understand not just how systems work but why. 
+                Committed to continuous learning and delivering reliable, user-centered solutions that keep academic operations running smoothly.
+            <!--</p>
+            <p class="about__text">
+              I specialize in building responsive, accessible web applications using modern
+              technologies. I believe in writing clean, maintainable code and continuously
+              improving my craft through learning and collaboration.
+            </p>
+            <p class="about__text">
+              When I'm not coding, you'll find me exploring new technologies, contributing
+              to open-source projects, or sharing knowledge through blog posts and mentoring.
+            </p>-->
+          </div>
+          <div class="about__skills">
+            <h3 class="about__heading">Technical Skills</h3>
+            <div class="about__skills-grid">
+              <div class="about__skill-group">
+                <h4 class="about__skill-category">Frontend</h4>
+                <ul class="about__skill-list">
+                  <!--<li class="about__skill-item">React</li>-->
+                  <li class="about__skill-item">JavaScript</li>
+                  <li class="about__skill-item">C#</li>
+                  <!--<li class="about__skill-item">TypeScript</li>-->
+                  <li class="about__skill-item">HTML/CSS</li>
+                  <!--<li class="about__skill-item">Tailwind</li>-->
+                </ul>
+              </div>
+              <div class="about__skill-group">
+                <h4 class="about__skill-category">Backend</h4>
+                <ul class="about__skill-list">
+                  <!--<li class="about__skill-item">Node.js</li>-->
+                  <!--<li class="about__skill-item">Express</li>
+                  <li class="about__skill-item">Python</li>
+                  <li class="about__skill-item">PostgreSQL</li>
+                  <li class="about__skill-item">MongoDB</li>-->
+                  <li class="about__skill-item">SQL Server Management Studio (SSMS)</li>
+                </ul>
+              </div>
+              <div class="about__skill-group">
+                <h4 class="about__skill-category">Tools</h4>
+                <ul class="about__skill-list">
+                  <!--<li class="about__skill-item">Git</li>
+                  <li class="about__skill-item">Docker</li>
+                  <li class="about__skill-item">AWS</li>
+                  <li class="about__skill-item">Figma</li>-->
+                  <li class="about__skill-item">VS Code</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <h2 class="section__title">My Projects</h2>
+        <p class="section__subtitle">
+          A selection of projects that showcase my skills and experience in building real-world applications.
+        </p>
+        <div class="portfolio__grid">
+          <article class="portfolio__card">
+            <div class="portfolio__card-content">
+              <h3 class="portfolio__card-title">E-Commerce Platform</h3>
+              <p class="portfolio__card-description">
+                A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.
+              </p>
+              <div class="portfolio__card-tags">
+                <span class="portfolio__tag">React</span>
+                <span class="portfolio__tag">Node.js</span>
+                <span class="portfolio__tag">MongoDB</span>
+                <span class="portfolio__tag">Stripe</span>
+              </div>
+              <div class="portfolio__card-links">
+                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio__card">
+            <div class="portfolio__card-content">
+              <h3 class="portfolio__card-title">Task Management App</h3>
+              <p class="portfolio__card-description">
+                A collaborative project management tool with real-time updates, drag-and-drop boards, and team workspace features.
+              </p>
+              <div class="portfolio__card-tags">
+                <span class="portfolio__tag">TypeScript</span>
+                <span class="portfolio__tag">Next.js</span>
+                <span class="portfolio__tag">PostgreSQL</span>
+                <span class="portfolio__tag">WebSocket</span>
+              </div>
+              <div class="portfolio__card-links">
+                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio__card">
+            <div class="portfolio__card-content">
+              <h3 class="portfolio__card-title">Weather Dashboard</h3>
+              <p class="portfolio__card-description">
+                A responsive weather dashboard that displays current conditions, forecasts, and interactive maps using multiple weather APIs.
+              </p>
+              <div class="portfolio__card-tags">
+                <span class="portfolio__tag">React</span>
+                <span class="portfolio__tag">REST API</span>
+                <span class="portfolio__tag">Chart.js</span>
+                <span class="portfolio__tag">CSS Grid</span>
+              </div>
+              <div class="portfolio__card-links">
+                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="portfolio__card">
+            <div class="portfolio__card-content">
+              <h3 class="portfolio__card-title">Blog Platform</h3>
+              <p class="portfolio__card-description">
+                A content management system with markdown support, SEO optimization, comment system, and an admin dashboard.
+              </p>
+              <div class="portfolio__card-tags">
+                <span class="portfolio__tag">Next.js</span>
+                <span class="portfolio__tag">Prisma</span>
+                <span class="portfolio__tag">PostgreSQL</span>
+                <span class="portfolio__tag">MDX</span>
+              </div>
+              <div class="portfolio__card-links">
+                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Resume Section -->
+    <section class="resume section" id="resume">
+      <div class="container">
+        <h2 class="section__title">Resume</h2>
+        <p class="section__subtitle">My professional background and career journey so far.</p>
+        <div class="resume__content">
+          <div class="resume__section">
+            <h3 class="resume__section-title">
+              <i class="fa-solid fa-briefcase"></i> Work Experience
+            </h3>
+            <div class="resume__timeline">
+              <div class="resume__item">
+                <div class="resume__item-header">
+                  <div>
+                    <h4 class="resume__item-role">Support Programmer</h4>
+                    <p class="resume__item-company">AMA Education System (AMAES)</p>
+                  </div>
+                  <span class="resume__item-period">Novemeber, 2025 – Present</span>
+                </div>
+                <ul class="resume__item-highlights">
+                  <li class="resume__item-point">Full-Stack Application Support: Maintain and support the core student portal 
+                    and internal enterprise applications using C#, .NET, SQL Server, and JavaScript—building full working proficiency from scratch within 8 months.</li>
+                  <li class="resume__item-point">Root-Cause Troubleshooting & Debugging: Diagnose complex frontend/backend bugs, trace system anomalies across logs and codebases, 
+                    and resolve underlying issues such as broken stored procedures, sync failures, and missing validation checks.</li>
+                  <li class="resume__item-point">Database & Query Optimization: Manage SQL Server databases by writing and tuning stored procedures, resolving slow-running queries, 
+                    and performing data integrity fixes to prevent recurring system errors.</li>
+                  <li class="resume__item-point">Cross-Functional Communication: Serve as the primary technical point of contact for students, teachers, 
+                    and staff—translating complex technical solutions into clear, simple language and providing senior developers with actionable context for escalation.</li>
+                  <li class="resume__item-point">System Growth & Continuous Improvement: Collaborate with senior engineers on deployments, updates, 
+                    and requirement analyses, actively expanding backend capabilities to prepare for high-complexity feature development.</li>
+                </ul>
+              </div>
+              <!--<div class="resume__item">
+                <div class="resume__item-header">
+                  <div>
+                    <h4 class="resume__item-role">Full-Stack Developer</h4>
+                    <p class="resume__item-company">Digital Agency</p>
+                  </div>
+                  <span class="resume__item-period">2021 – 2023</span>
+                </div>
+                <ul class="resume__item-highlights">
+                  <li class="resume__item-point">Developed and shipped 12+ client projects using React and Node.js</li>
+                  <li class="resume__item-point">Built reusable component libraries reducing development time by 40%</li>
+                  <li class="resume__item-point">Collaborated with designers to implement pixel-perfect responsive interfaces</li>
+                </ul>
+              </div>-->
+              <!--<div class="resume__item">
+                <div class="resume__item-header">
+                  <div>
+                    <h4 class="resume__item-role">Junior Web Developer</h4>
+                    <p class="resume__item-company">Startup Inc.</p>
+                  </div>
+                  <span class="resume__item-period">2020 – 2021</span>
+                </div>
+                <ul class="resume__item-highlights">
+                  <li class="resume__item-point">Built and maintained features for a SaaS application serving 10k+ users</li>
+                  <li class="resume__item-point">Optimized database queries resulting in 50% faster page loads</li>
+                  <li class="resume__item-point">Participated in agile sprints and contributed to product roadmap discussions</li>
+                </ul>
+              </div>-->
+            </div>
+          </div>
+          <div class="resume__section">
+            <h3 class="resume__section-title">
+              <i class="fa-solid fa-graduation-cap"></i> Education
+            </h3>
+            <div class="resume__timeline">
+              <div class="resume__item">
+                <div class="resume__item-header">
+                  <div>
+                    <h4 class="resume__item-role">Bachelor of Science in Computer Science</h4>
+                    <p class="resume__item-company">University of Antiques</p>
+                  </div>
+                  <span class="resume__item-period">2022 – 2025</span>
+                </div>
+                <p class="resume__item-details">Focus on programming fundamentals, computer literacy, computer hardware, and computer networking.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resume__download">
+          <a href="#" class="btn btn--primary"><i class="fa-solid fa-download"></i> Download Full Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <h2 class="section__title">Get in Touch</h2>
+        <p class="section__subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+        <div class="contact__grid">
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4 class="contact__info-title">Email</h4>
+                <a href="mailto:andreinaig00912@gmail.com" class="contact__info-value">andreinaig00912@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4 class="contact__info-title">Location</h4>
+                <p class="contact__info-value">Victoria ABC&D Towers, Timog Avenu, Paligsahan, Diliman, Quezon City</p>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4 class="contact__info-title">Availability</h4>
+                <p class="contact__info-value">Open to freelance and full-time roles</p>
+              </div>
+            </div>
+            <div class="contact__socials">
+              <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="contact__social-link">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVFjBhA9uR2iRUoDH9VmqNA%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact__social-link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="contact__social-link">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <div class="contact__form-row">
+              <div class="contact__form-group">
+                <label for="name" class="contact__label">Name</label>
+                <input type="text" id="name" name="name" required class="contact__input" placeholder="Your name" />
+              </div>
+              <div class="contact__form-group">
+                <label for="email" class="contact__label">Email</label>
+                <input type="email" id="email" name="email" required class="contact__input" placeholder="your@email.com" />
+              </div>
+            </div>
+            <div class="contact__form-group">
+              <label for="subject" class="contact__label">Subject</label>
+              <input type="text" id="subject" name="subject" required class="contact__input" placeholder="What's this about?" />
+            </div>
+            <div class="contact__form-group">
+              <label for="message" class="contact__label">Message</label>
+              <textarea id="message" name="message" required rows="6" class="contact__input contact__textarea" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary contact__submit">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__text">&copy; 2026 Your Name. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="#home" class="footer__link">Home</a>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#portfolio" class="footer__link">Work</a>
+        <a href="#contact" class="footer__link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
