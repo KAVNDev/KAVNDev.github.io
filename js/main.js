@@ -9,7 +9,6 @@ navToggle.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', isOpen);
 });
 
-// Close menu when a link is clicked
 document.querySelectorAll('.navbar__link').forEach((link) => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('navbar__menu--open');
@@ -43,11 +42,232 @@ function highlightNavLink() {
 
 window.addEventListener('scroll', highlightNavLink);
 
-// Contact Form Handling
+// Contact Form with Success Animation
 const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  alert('Thank you for your message! I will get back to you soon.');
+  formSuccess.classList.add('contact__form-success--visible');
   contactForm.reset();
+  setTimeout(() => {
+    formSuccess.classList.remove('contact__form-success--visible');
+  }, 3000);
 });
+
+// ===== TYPEWRITER EFFECT =====
+const typewriterElement = document.getElementById('typewriter');
+const phrases = ['Support Programmer', 'Backend Developer', 'Problem Solver', 'Debug Specialist'];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 80;
+
+function typewrite() {
+  const currentPhrase = phrases[phraseIndex];
+
+  if (isDeleting) {
+    typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+    charIndex--;
+    typeSpeed = 40;
+  } else {
+    typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+    charIndex++;
+    typeSpeed = 80;
+  }
+
+  if (!isDeleting && charIndex === currentPhrase.length) {
+    typeSpeed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    typeSpeed = 400;
+  }
+
+  setTimeout(typewrite, typeSpeed);
+}
+
+typewrite();
+
+// ===== SCROLL REVEAL =====
+const revealElements = document.querySelectorAll(
+  '.section__title, .section__subtitle, .about__grid, .portfolio__card, .resume__item, .contact__grid, .hero__content, .hero__image, .stats__item'
+);
+
+revealElements.forEach((el) => el.classList.add('reveal'));
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal--visible');
+      }
+    });
+  },
+  { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));
+
+// ===== NAVBAR SCROLL EFFECT =====
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('navbar--scrolled');
+  } else {
+    navbar.classList.remove('navbar--scrolled');
+  }
+});
+
+// ===== BACK TO TOP BUTTON =====
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.add('back-to-top--visible');
+  } else {
+    backToTop.classList.remove('back-to-top--visible');
+  }
+});
+
+// ===== STATS COUNTER ANIMATION =====
+const statsNumbers = document.querySelectorAll('.stats__number');
+
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = parseInt(entry.target.getAttribute('data-target'));
+        animateCounter(entry.target, target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+statsNumbers.forEach((num) => counterObserver.observe(num));
+
+function animateCounter(element, target) {
+  let current = 0;
+  const duration = 1500;
+  const step = target / (duration / 30);
+
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) {
+      element.textContent = target;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, 30);
+}
+
+// ===== CURSOR SPOTLIGHT =====
+const spotlight = document.getElementById('cursorSpotlight');
+
+document.addEventListener('mousemove', (e) => {
+  spotlight.style.left = e.clientX + 'px';
+  spotlight.style.top = e.clientY + 'px';
+  spotlight.classList.add('cursor-spotlight--active');
+});
+
+document.addEventListener('mouseleave', () => {
+  spotlight.classList.remove('cursor-spotlight--active');
+});
+
+// ===== SCROLL PROGRESS BAR =====
+const scrollProgress = document.getElementById('scrollProgress');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  scrollProgress.style.width = scrollPercent + '%';
+});
+
+// ===== PRELOADER =====
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => {
+    preloader.classList.add('preloader--hidden');
+    document.querySelector('.hero__content').classList.add('hero--loaded');
+    document.querySelector('.hero__image').classList.add('hero--loaded');
+  }, 1500);
+});
+
+// ===== MAGNETIC BUTTONS =====
+document.querySelectorAll('.btn--magnetic').forEach((btn) => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+  });
+});
+
+// ===== 3D TILT ON PROFILE PHOTO =====
+const avatar = document.querySelector('.hero__avatar');
+
+if (avatar) {
+  avatar.addEventListener('mousemove', (e) => {
+    const rect = avatar.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    avatar.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg) scale(1.03)`;
+  });
+
+  avatar.addEventListener('mouseleave', () => {
+    avatar.style.transform = 'rotateY(0) rotateX(0) scale(1)';
+  });
+}
+
+// ===== FLOATING PARTICLES =====
+const particlesContainer = document.getElementById('particles');
+
+function createParticle() {
+  const particle = document.createElement('div');
+  particle.classList.add('particle');
+  particle.style.left = Math.random() * 100 + '%';
+  particle.style.animationDuration = Math.random() * 8 + 6 + 's';
+  particle.style.width = Math.random() * 3 + 1 + 'px';
+  particle.style.height = particle.style.width;
+  particle.style.opacity = Math.random() * 0.3 + 0.05;
+  particlesContainer.appendChild(particle);
+
+  setTimeout(() => {
+    particle.remove();
+  }, 14000);
+}
+
+setInterval(createParticle, 600);
+
+// ===== DYNAMIC GREETING =====
+const greetingEl = document.getElementById('heroGreeting');
+const hour = new Date().getHours();
+let greeting = 'Hello';
+
+if (hour >= 5 && hour < 12) greeting = 'Good morning';
+else if (hour >= 12 && hour < 18) greeting = 'Good afternoon';
+else greeting = 'Good evening';
+
+greetingEl.textContent = greeting + ", I'm";
+
+// ===== LAZY LOAD BLUR EFFECT =====
+const lazyImg = document.querySelector('.hero__avatar-img--lazy');
+if (lazyImg) {
+  if (lazyImg.complete) {
+    lazyImg.classList.add('hero__avatar-img--loaded');
+  } else {
+    lazyImg.addEventListener('load', () => {
+      lazyImg.classList.add('hero__avatar-img--loaded');
+    });
+  }
+}

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Profile</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>K</text></svg>" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,10 +20,25 @@
   />
 </head>
 <body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <span class="preloader__text">KAVN</span>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Floating Particles -->
+  <div class="particles" id="particles"></div>
   <!-- Navbar -->
   <header class="navbar" id="navbar">
     <nav class="navbar__container container" aria-label="Main navigation">
-      <a href="#home" class="navbar__logo">Portfolio<span class="navbar__logo-dot">.</span></a>
+      <a href="#home" class="navbar__logo">
+        <svg class="navbar__logo-svg" viewBox="0 0 40 40" width="32" height="32">
+          <path class="navbar__logo-path" d="M8 32 L8 8 L20 20 L32 8 L32 32" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="navbar__logo-text">KAVN<span class="navbar__logo-dot">.</span></span>
+      </a>
       <button
         class="navbar__toggle"
         id="navToggle"
@@ -44,33 +60,70 @@
   <main>
     <!-- Home Section -->
     <section class="hero section" id="home">
+      <div class="hero__code-decoration" aria-hidden="true">
+        <span>{ code: "life" }</span>
+      </div>
       <div class="container hero__container">
         <div class="hero__content">
-          <p class="hero__greeting">Hello, I'm</p>
+          <p class="hero__greeting" id="heroGreeting">Hello, I'm</p>
           <h1 class="hero__name">KIAN ANDREI V. NAIG</h1>
-          <h2 class="hero__title">Support Programmer</h2>
+          <h2 class="hero__title">
+            <span class="typewriter" id="typewriter"></span>
+            <span class="typewriter__cursor">|</span>
+          </h2>
           <p class="hero__description">
               A Support Programmer skilled in C#, .NET, and SQL Server, specializing in root-cause debugging, maintaining backend data integrity, and translating complex technical solutions into clear, user-centered answers.
           </p>
           <div class="hero__actions">
-            <a href="#portfolio" class="btn btn--primary">View My Work</a>
-            <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+            <a href="#portfolio" class="btn btn--primary btn--magnetic">View My Work</a>
+            <a href="#contact" class="btn btn--ghost btn--magnetic">Get in Touch</a>
+            <div class="hero__stat">
+              <span class="stats__number" data-target="8">0</span>
+              <span class="stats__label">Months Exp.</span>
+            </div>
           </div>
           <div class="hero__social">
             <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hero__social-link">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVFjBhA9uR2iRUoDH9VmqNA%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero__social-link">
+            <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero__social-link">
               <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="hero__social-link">
-              <i class="fa-brands fa-x-twitter"></i>
             </a>
           </div>
         </div>
         <div class="hero__image">
           <div class="hero__avatar">
-            <span class="hero__avatar-placeholder">YN</span>
+            <img src="img/ProfileP.png" alt="Kian Andrei V. Naig" class="hero__avatar-img hero__avatar-img--lazy" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <h2 class="section__title">What I Do</h2>
+        <p class="section__subtitle">Core areas where I deliver value every day.</p>
+        <div class="services__grid">
+          <div class="services__card">
+            <div class="services__icon"><i class="fa-solid fa-bug"></i></div>
+            <h3 class="services__card-title">Debugging</h3>
+            <p class="services__card-text">Trace complex bugs across frontend and backend layers to their root cause.</p>
+          </div>
+          <div class="services__card">
+            <div class="services__icon"><i class="fa-solid fa-server"></i></div>
+            <h3 class="services__card-title">Backend Support</h3>
+            <p class="services__card-text">Maintain and support enterprise applications using C#, .NET, and SQL Server.</p>
+          </div>
+          <div class="services__card">
+            <div class="services__icon"><i class="fa-solid fa-database"></i></div>
+            <h3 class="services__card-title">Database Management</h3>
+            <p class="services__card-text">Write, tune, and fix stored procedures to keep data integrity intact.</p>
+          </div>
+          <div class="services__card">
+            <div class="services__icon"><i class="fa-solid fa-headset"></i></div>
+            <h3 class="services__card-title">Customer Support</h3>
+            <p class="services__card-text">Translate complex technical issues into clear, simple language for end users.</p>
           </div>
         </div>
       </div>
@@ -79,13 +132,13 @@
     <!-- About Section -->
     <section class="about section" id="about">
       <div class="container">
-        <h2 class="section__title">About Me</h2>
+        <h2 class="section__title">ABOUT ME</h2>
         <p class="section__subtitle">
           Get to know my background, skills, and what drives me as a developer.
         </p>
         <div class="about__grid">
           <div class="about__story">
-            <h3 class="about__heading">About Me</h3>
+              <h3 class="about__heading">Profile</h3>
             <p class="about__text">
                 Support Programmer with hands-on experience in C#, .NET, SQL Server, and JavaScript, focused on system maintenance, debugging, 
                 and backend support for student information systems and internal applications. 
@@ -96,7 +149,7 @@
                 including students, staff, and teachers, translating complex fixes into simple, understandable language. 
                 Collaborates effectively within small teams, regularly coordinates with senior developers on escalated issues, 
                 and proactively seeks to understand not just how systems work but why. 
-                Committed to continuous learning and delivering reliable, user-centered solutions that keep academic operations running smoothly.
+                Committed to continuous learning and delivering reliable, user-centered solutions that keep operations running smoothly.
             <!--</p>
             <p class="about__text">
               I specialize in building responsive, accessible web applications using modern
@@ -114,33 +167,21 @@
               <div class="about__skill-group">
                 <h4 class="about__skill-category">Frontend</h4>
                 <ul class="about__skill-list">
-                  <!--<li class="about__skill-item">React</li>-->
-                  <li class="about__skill-item">JavaScript</li>
-                  <li class="about__skill-item">C#</li>
-                  <!--<li class="about__skill-item">TypeScript</li>-->
-                  <li class="about__skill-item">HTML/CSS</li>
-                  <!--<li class="about__skill-item">Tailwind</li>-->
+                  <li class="about__skill-item"><i class="fa-brands fa-js"></i> JavaScript</li>
+                  <li class="about__skill-item"><i class="fa-brands fa-microsoft"></i> C#</li>
+                  <li class="about__skill-item"><i class="fa-brands fa-html5"></i> HTML/CSS</li>
                 </ul>
               </div>
               <div class="about__skill-group">
                 <h4 class="about__skill-category">Backend</h4>
                 <ul class="about__skill-list">
-                  <!--<li class="about__skill-item">Node.js</li>-->
-                  <!--<li class="about__skill-item">Express</li>
-                  <li class="about__skill-item">Python</li>
-                  <li class="about__skill-item">PostgreSQL</li>
-                  <li class="about__skill-item">MongoDB</li>-->
-                  <li class="about__skill-item">SQL Server Management Studio (SSMS)</li>
+                  <li class="about__skill-item"><i class="fa-solid fa-database"></i> SQL Server (SSMS)</li>
                 </ul>
               </div>
               <div class="about__skill-group">
                 <h4 class="about__skill-category">Tools</h4>
                 <ul class="about__skill-list">
-                  <!--<li class="about__skill-item">Git</li>
-                  <li class="about__skill-item">Docker</li>
-                  <li class="about__skill-item">AWS</li>
-                  <li class="about__skill-item">Figma</li>-->
-                  <li class="about__skill-item">VS Code</li>
+                  <li class="about__skill-item"><i class="fa-solid fa-code"></i> VS Code</li>
                 </ul>
               </div>
             </div>
@@ -152,30 +193,34 @@
     <!-- Portfolio Section -->
     <section class="portfolio section" id="portfolio">
       <div class="container">
-        <h2 class="section__title">My Projects</h2>
+        <h2 class="section__title">MY PROJECTS</h2>
         <p class="section__subtitle">
           A selection of projects that showcase my skills and experience in building real-world applications.
         </p>
         <div class="portfolio__grid">
-          <article class="portfolio__card">
-            <div class="portfolio__card-content">
-              <h3 class="portfolio__card-title">E-Commerce Platform</h3>
-              <p class="portfolio__card-description">
-                A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration.
-              </p>
-              <div class="portfolio__card-tags">
-                <span class="portfolio__tag">React</span>
-                <span class="portfolio__tag">Node.js</span>
-                <span class="portfolio__tag">MongoDB</span>
-                <span class="portfolio__tag">Stripe</span>
+          <article class="portfolio__card portfolio__card--flip">
+            <div class="portfolio__card-inner">
+              <div class="portfolio__card-front">
+                <div class="portfolio__card-content">
+                  <h3 class="portfolio__card-title">WORK IN PROGRESS</h3>
+                  <p class="portfolio__card-description">Still in development. Hover to see more.</p>
+                  <div class="portfolio__card-tags">
+                    <span class="portfolio__tag">Coming Soon</span>
+                  </div>
+                </div>
               </div>
-              <div class="portfolio__card-links">
-                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
+              <div class="portfolio__card-back">
+                <div class="portfolio__card-content">
+                  <h3 class="portfolio__card-title">Details</h3>
+                  <p class="portfolio__card-description">A personal project is currently being planned. Stay tuned for updates on GitHub.</p>
+                  <div class="portfolio__card-links">
+                    <a href="https://github.com/KAVNDev" class="portfolio__link"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
-          <article class="portfolio__card">
+          <!--<article class="portfolio__card">
             <div class="portfolio__card-content">
               <h3 class="portfolio__card-title">Task Management App</h3>
               <p class="portfolio__card-description">
@@ -228,7 +273,7 @@
                 <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
               </div>
             </div>
-          </article>
+          </article>-->
         </div>
       </div>
     </section>
@@ -237,7 +282,7 @@
     <!-- Resume Section -->
     <section class="resume section" id="resume">
       <div class="container">
-        <h2 class="section__title">Resume</h2>
+        <h2 class="section__title">RESUME</h2>
         <p class="section__subtitle">My professional background and career journey so far.</p>
         <div class="resume__content">
           <div class="resume__section">
@@ -251,7 +296,7 @@
                     <h4 class="resume__item-role">Support Programmer</h4>
                     <p class="resume__item-company">AMA Education System (AMAES)</p>
                   </div>
-                  <span class="resume__item-period">Novemeber, 2025 – Present</span>
+                  <span class="resume__item-period">November, 2025 – Present</span>
                 </div>
                 <ul class="resume__item-highlights">
                   <li class="resume__item-point">Full-Stack Application Support: Maintain and support the core student portal 
@@ -301,29 +346,30 @@
               <i class="fa-solid fa-graduation-cap"></i> Education
             </h3>
             <div class="resume__timeline">
-              <div class="resume__item">
-                <div class="resume__item-header">
-                  <div>
-                    <h4 class="resume__item-role">Bachelor of Science in Computer Science</h4>
-                    <p class="resume__item-company">University of Antiques</p>
-                  </div>
-                  <span class="resume__item-period">2022 – 2025</span>
+                <div class="resume__item">
+                    <div class="resume__item-header">
+                        <div>
+                            <h4 class="resume__item-role">Bachelor of Science in Computer Science</h4>
+                            <p class="resume__item-company">Major in Information Systems</p>
+                            <p class="resume__item-company">University of Antique (UA) - Main Campus</p>
+                        </div>
+                        <span class="resume__item-period">2022 – 2025</span>
+                    </div>
+                    <p class="resume__item-details">Focus on programming fundamentals, computer literacy, computer hardware, and computer networking.</p>
                 </div>
-                <p class="resume__item-details">Focus on programming fundamentals, computer literacy, computer hardware, and computer networking.</p>
-              </div>
             </div>
           </div>
         </div>
-        <div class="resume__download">
+        <!--<div class="resume__download">
           <a href="#" class="btn btn--primary"><i class="fa-solid fa-download"></i> Download Full Resume</a>
-        </div>
+        </div>-->
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact section" id="contact">
       <div class="container">
-        <h2 class="section__title">Get in Touch</h2>
+        <h2 class="section__title">GET IN TOUCH</h2>
         <p class="section__subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
         <div class="contact__grid">
           <div class="contact__info">
@@ -331,14 +377,14 @@
               <div class="contact__info-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <h4 class="contact__info-title">Email</h4>
-                <a href="mailto:andreinaig00912@gmail.com" class="contact__info-value">andreinaig00912@gmail.com</a>
+                <a href="mailto:hello@kavndev.com" class="contact__info-value">hello@kavndev.com</a>
               </div>
             </div>
             <div class="contact__info-item">
               <div class="contact__info-icon"><i class="fa-solid fa-location-dot"></i></div>
               <div>
                 <h4 class="contact__info-title">Location</h4>
-                <p class="contact__info-value">Victoria ABC&D Towers, Timog Avenu, Paligsahan, Diliman, Quezon City</p>
+                <p class="contact__info-value">Quezon City, Philippines</p>
               </div>
             </div>
             <div class="contact__info-item">
@@ -352,34 +398,49 @@
               <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="contact__social-link">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVFjBhA9uR2iRUoDH9VmqNA%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact__social-link">
+              <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact__social-link">
                 <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="contact__social-link">
-                <i class="fa-brands fa-x-twitter"></i>
               </a>
             </div>
           </div>
-          <form class="contact__form" id="contactForm">
+          <form class="contact__form" id="contactForm" action="https://api.staticforms.xyz/submit" method="POST">
+            <div class="contact__form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              <p>Message sent successfully!</p>
+            </div>
+            <input type="hidden" name="accessKey" value="sf_0c6af9c04ad1f1f82f54d0ff" />
+            <input type="hidden" name="redirectTo" value="" />
             <div class="contact__form-row">
               <div class="contact__form-group">
                 <label for="name" class="contact__label">Name</label>
-                <input type="text" id="name" name="name" required class="contact__input" placeholder="Your name" />
+                <div class="contact__input-wrap">
+                  <input type="text" id="name" name="name" required class="contact__input" placeholder="Your name" />
+                  <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+                </div>
               </div>
               <div class="contact__form-group">
                 <label for="email" class="contact__label">Email</label>
-                <input type="email" id="email" name="email" required class="contact__input" placeholder="your@email.com" />
+                <div class="contact__input-wrap">
+                  <input type="email" id="email" name="email" required class="contact__input" placeholder="your@email.com" />
+                  <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+                </div>
               </div>
             </div>
             <div class="contact__form-group">
               <label for="subject" class="contact__label">Subject</label>
-              <input type="text" id="subject" name="subject" required class="contact__input" placeholder="What's this about?" />
+              <div class="contact__input-wrap">
+                <input type="text" id="subject" name="subject" required class="contact__input" placeholder="What's this about?" />
+                <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+              </div>
             </div>
             <div class="contact__form-group">
               <label for="message" class="contact__label">Message</label>
-              <textarea id="message" name="message" required rows="6" class="contact__input contact__textarea" placeholder="Tell me about your project..."></textarea>
+              <div class="contact__input-wrap">
+                <textarea id="message" name="message" required rows="6" class="contact__input contact__textarea" placeholder="Tell me about your project..."></textarea>
+                <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+              </div>
             </div>
-            <button type="submit" class="btn btn--primary contact__submit">
+            <button type="submit" class="btn btn--primary btn--magnetic contact__submit">
               <i class="fa-solid fa-paper-plane"></i> Send Message
             </button>
           </form>
@@ -390,16 +451,18 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer__container">
-      <p class="footer__text">&copy; 2026 Your Name. All rights reserved.</p>
-      <div class="footer__links">
-        <a href="#home" class="footer__link">Home</a>
-        <a href="#about" class="footer__link">About</a>
-        <a href="#portfolio" class="footer__link">Work</a>
-        <a href="#contact" class="footer__link">Contact</a>
-      </div>
+    <div class="container">
+      <p class="footer__text">&copy; 2026 KAVNDev. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Cursor Spotlight -->
+  <div class="cursor-spotlight" id="cursorSpotlight"></div>
+
+  <!-- Back to Top Bubble -->
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
 
   <script src="js/main.js"></script>
 </body>
