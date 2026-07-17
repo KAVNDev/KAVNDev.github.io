@@ -1249,12 +1249,9 @@ html {
   z-index: 0;
 }
 
-/* ===== NAME TEXT GRADIENT ===== */
+/* ===== NAME TEXT ===== */
 .hero__name {
-  background: linear-gradient(135deg, #ffffff 0%, rgb(255 255 255 / 0.6) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 /* ===== NAV LINK HOVER HIGHLIGHT ===== */
@@ -1647,4 +1644,11 @@ html {
 .portfolio__card-front .portfolio__card-content,
 .portfolio__card-back .portfolio__card-content {
   width: 100%;
+}
+
+/* ===== EMAIL COPY PROTECTION ===== */
+.contact__email-protected {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }

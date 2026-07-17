@@ -291,3 +291,18 @@ if (lazyImg) {
     });
   }
 }
+
+// ===== INJECT ACCESS KEY =====
+document.getElementById('formAccessKey').value = 'sf_0c6af9c04ad1f1f82f54d0ff';
+
+// ===== FORM COOLDOWN (30s between submissions) =====
+let lastSubmitTime = 0;
+contactForm.querySelector('.contact__submit').addEventListener('click', (e) => {
+  const now = Date.now();
+  if (now - lastSubmitTime < 30000 && lastSubmitTime !== 0) {
+    e.preventDefault();
+    alert('Please wait 30 seconds before sending another message.');
+    return;
+  }
+  lastSubmitTime = now;
+});

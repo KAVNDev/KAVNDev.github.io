@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Profile</title>
+  <meta name="description" content="Kian Andrei V. Naig - Support Programmer skilled in C#, .NET, and SQL Server. Specializing in root-cause debugging and backend support." />
+  <meta name="author" content="Kian Andrei V. Naig" />
+  <meta property="og:title" content="KAVN - Support Programmer Portfolio" />
+  <meta property="og:description" content="Support Programmer skilled in C#, .NET, and SQL Server. Specializing in root-cause debugging and backend support." />
+  <meta property="og:image" content="img/ProfileP.png" />
+  <meta property="og:type" content="website" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://images.pexels.com data:; script-src 'self' 'unsafe-inline'; connect-src https://api.staticforms.xyz;" />
+  <title>KAVN | Support Programmer</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>K</text></svg>" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +22,7 @@
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
@@ -150,16 +158,7 @@
                 Collaborates effectively within small teams, regularly coordinates with senior developers on escalated issues, 
                 and proactively seeks to understand not just how systems work but why. 
                 Committed to continuous learning and delivering reliable, user-centered solutions that keep operations running smoothly.
-            <!--</p>
-            <p class="about__text">
-              I specialize in building responsive, accessible web applications using modern
-              technologies. I believe in writing clean, maintainable code and continuously
-              improving my craft through learning and collaboration.
             </p>
-            <p class="about__text">
-              When I'm not coding, you'll find me exploring new technologies, contributing
-              to open-source projects, or sharing knowledge through blog posts and mentoring.
-            </p>-->
           </div>
           <div class="about__skills">
             <h3 class="about__heading">Technical Skills</h3>
@@ -366,7 +365,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section -->y
     <section class="contact section" id="contact">
       <div class="container">
         <h2 class="section__title">GET IN TOUCH</h2>
@@ -377,7 +376,7 @@
               <div class="contact__info-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <h4 class="contact__info-title">Email</h4>
-                <a href="mailto:hello@kavndev.com" class="contact__info-value">hello@kavndev.com</a>
+                <a href="mailto:andreinaig00912@gmail.com" class="contact__info-value contact__email-protected" oncopy="return false" oncut="return false">andreinaig00912@gmail.com</a>
               </div>
             </div>
             <div class="contact__info-item">
@@ -408,8 +407,9 @@
               <i class="fa-solid fa-circle-check"></i>
               <p>Message sent successfully!</p>
             </div>
-            <input type="hidden" name="accessKey" value="sf_0c6af9c04ad1f1f82f54d0ff" />
+            <input type="hidden" name="accessKey" id="formAccessKey" value="" />
             <input type="hidden" name="redirectTo" value="" />
+            <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
             <div class="contact__form-row">
               <div class="contact__form-group">
                 <label for="name" class="contact__label">Name</label>
