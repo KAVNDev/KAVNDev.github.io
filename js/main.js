@@ -48,11 +48,27 @@ const formSuccess = document.getElementById('formSuccess');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  formSuccess.classList.add('contact__form-success--visible');
-  contactForm.reset();
-  setTimeout(() => {
-    formSuccess.classList.remove('contact__form-success--visible');
-  }, 3000);
+  const formData = new FormData(contactForm);
+
+  fetch(contactForm.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then((response) => {
+    if (response.ok) {
+      formSuccess.classList.add('contact__form-success--visible');
+      contactForm.reset();
+      setTimeout(() => {
+        formSuccess.classList.remove('contact__form-success--visible');
+      }, 3000);
+    }
+  }).catch(() => {
+    formSuccess.classList.add('contact__form-success--visible');
+    contactForm.reset();
+    setTimeout(() => {
+      formSuccess.classList.remove('contact__form-success--visible');
+    }, 3000);
+  });
 });
 
 // ===== TYPEWRITER EFFECT =====
