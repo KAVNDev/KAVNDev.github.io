@@ -1,3 +1,7 @@
+// Force scroll to top on page refresh
+history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 // Mobile Navigation Toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
