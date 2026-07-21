@@ -77,7 +77,11 @@ contactForm.addEventListener('submit', (e) => {
 
 // ===== TYPEWRITER EFFECT =====
 const typewriterElement = document.getElementById('typewriter');
-const phrases = ['Support Programmer', 'Backend Suppport', 'Problem Solver', 'Debug Specialist'];
+const phrases = ['Support Programmer',
+    //'Backend Suppport',
+    'Problem Solver' 
+    //'Debug Specialist'
+];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
