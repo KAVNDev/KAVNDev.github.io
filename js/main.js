@@ -310,3 +310,39 @@ contactForm.querySelector('.contact__submit').addEventListener('click', (e) => {
   }
   lastSubmitTime = now;
 });
+
+// ===== SERVICE MODALS =====
+const serviceCards = document.querySelectorAll('.services__card[data-modal]');
+
+serviceCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    const modalId = card.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('modal--open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+
+document.querySelectorAll('[data-close]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal');
+    if (modal) {
+      modal.classList.remove('modal--open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal--open').forEach((m) => {
+      m.classList.remove('modal--open');
+      m.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  }
+});
