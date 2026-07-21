@@ -9,12 +9,18 @@
   <meta property="og:description" content="Support Programmer skilled in C#, .NET, and SQL Server. Specializing in root-cause debugging and backend support." />
   <meta property="og:image" content="img/ProfileP.png" />
   <meta property="og:type" content="website" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://images.pexels.com data:; script-src 'self' 'unsafe-inline'; connect-src https://api.staticforms.xyz;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://images.pexels.com data:; script-src 'self' 'unsafe-inline' https://unpkg.com; connect-src https://api.staticforms.xyz;" />
   <title>KAVN | Support Programmer</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>K</text></svg>" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
+    as="style"
+  />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
@@ -87,6 +93,7 @@
             <span class="typewriter" id="typewriter"></span>
             <span class="typewriter__cursor">|</span>
           </h2>
+
           <p class="hero__description">
               A Support Programmer skilled in C#, .NET, and SQL Server, specializing in root-cause debugging, maintaining backend data integrity, and translating complex technical solutions into clear, user-centered answers.
           </p>
@@ -108,8 +115,12 @@
           </div>
         </div>
         <div class="hero__image">
+          <div class="hero__scroll-hint" aria-hidden="true">
+            <span>Scroll to explore</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
           <div class="hero__avatar">
-            <img src="img/ProfileP.png" alt="Kian Andrei V. Naig" class="hero__avatar-img hero__avatar-img--lazy" loading="lazy" />
+            <img src="img/ProfileP.png" alt="Kian Andrei V. Naig" class="hero__avatar-img hero__avatar-img--lazy" fetchpriority="high" draggable="false" />
           </div>
         </div>
       </div>
@@ -515,6 +526,33 @@
     <i class="fa-solid fa-arrow-up"></i>
   </a>
 
+  <!-- Background layers -->
+  <div class="bg-image" id="bgImage" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="rhythm-lines" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <svg class="cursor__spearhead" viewBox="0 0 20 24" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="rgb(255 255 255 / 0.55)" />
+          <stop offset="50%" stop-color="rgb(255 255 255 / 0.1)" />
+          <stop offset="100%" stop-color="rgb(200 220 255 / 0.45)" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M2 2 L2 17 L6 13.5 L8.5 19 L10.5 18 L8 12.5 L13.5 12.5 Z"
+        fill="url(#glassGrad)"
+        stroke="rgb(255 255 255 / 0.9)"
+        stroke-width="1"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
