@@ -331,12 +331,12 @@ document.addEventListener('keydown', (e) => {
 
 // ===== LENIS SMOOTH SCROLL (with momentum) =====
 const lenis = new Lenis({
-  duration: 1.4,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  duration: 2,
+  easing: (t) => 1 - Math.pow(1 - t, 4),
   smoothWheel: true,
-  wheelMultiplier: 1,
-  touchMultiplier: 2,
-  lerp: 0.08,
+  wheelMultiplier: 0.8,
+  touchMultiplier: 1.5,
+  lerp: 0.06,
 });
 
 function raf(time) {
