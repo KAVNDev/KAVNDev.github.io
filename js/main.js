@@ -170,29 +170,6 @@ function animateCounter(element, target) {
   }, 30);
 }
 
-// ===== CURSOR SPOTLIGHT (rAF throttled + passive) =====
-const spotlight = document.getElementById('cursorSpotlight');
-let spotlightRafPending = false;
-let spotlightMouseX = 0;
-let spotlightMouseY = 0;
-
-document.addEventListener('mousemove', (e) => {
-  spotlightMouseX = e.clientX;
-  spotlightMouseY = e.clientY;
-  if (spotlightRafPending) return;
-  spotlightRafPending = true;
-  requestAnimationFrame(() => {
-    spotlight.style.left = spotlightMouseX + 'px';
-    spotlight.style.top = spotlightMouseY + 'px';
-    spotlight.classList.add('cursor-spotlight--active');
-    spotlightRafPending = false;
-  });
-}, { passive: true });
-
-document.addEventListener('mouseleave', () => {
-  spotlight.classList.remove('cursor-spotlight--active');
-}, { passive: true });
-
 // Scroll progress handled by consolidated Lenis listener
 
 // ===== PRELOADER =====
@@ -331,12 +308,11 @@ document.addEventListener('keydown', (e) => {
 
 // ===== LENIS SMOOTH SCROLL (with momentum) =====
 const lenis = new Lenis({
-  duration: 2,
-  easing: (t) => 1 - Math.pow(1 - t, 4),
+  easing: (t) => 1 - Math.pow(1 - t, 3),
   smoothWheel: true,
-  wheelMultiplier: 0.8,
-  touchMultiplier: 1.5,
-  lerp: 0.06,
+  wheelMultiplier: 1.4,
+  touchMultiplier: 2,
+  lerp: 0.09,
 });
 
 function raf(time) {
@@ -353,7 +329,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const target = document.querySelector(targetId);
     if (!target) return;
     e.preventDefault();
-    lenis.scrollTo(target, { offset: -70, duration: 1.5 });
+    lenis.scrollTo(target, { offset: -70, duration: 0.7 });
   });
 });
 
@@ -473,43 +449,6 @@ document.querySelectorAll('section').forEach((s) => offscreenObserver.observe(s)
 // Expose lenis for keyboard nav
 if (typeof lenis !== 'undefined') window.lenis = lenis;
 
-// ===== CUSTOM CURSOR =====
-(function initCustomCursor() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-  const cursor = document.getElementById('cursor');
-  if (!cursor) return;
-
-  let cursorX = 0;
-  let cursorY = 0;
-  let cursorRafPending = false;
-
-  document.addEventListener('mousemove', (e) => {
-    cursorX = e.clientX;
-    cursorY = e.clientY;
-    if (cursorRafPending) return;
-    cursorRafPending = true;
-    requestAnimationFrame(() => {
-      cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
-      cursorRafPending = false;
-    });
-  }, { passive: true });
-
-  document.addEventListener('mouseleave', () => {
-    cursor.classList.add('cursor--hidden');
-  }, { passive: true });
-
-  document.addEventListener('mouseenter', () => {
-    cursor.classList.remove('cursor--hidden');
-  }, { passive: true });
-
-  const hoverSelector = 'a, button, .btn, .services__card, .portfolio__card, .resume__item, input, textarea, .hero__avatar';
-  document.querySelectorAll(hoverSelector).forEach((el) => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('cursor--hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('cursor--hover'));
-  });
-})();
-
 // ===== KEYBOARD NAVIGATION =====
 document.addEventListener('keydown', (e) => {
   if (e.target.matches('input, textarea')) return;
@@ -543,42 +482,10 @@ document.addEventListener('keydown', (e) => {
 
   const target = document.getElementById(sectionIds[nextIndex]);
   if (target && window.lenis) {
-    window.lenis.scrollTo(target, { offset: -70, duration: 1.2 });
+    window.lenis.scrollTo(target, { offset: -70, duration: 0.6 });
   } else if (target) {
     target.scrollIntoView({ behavior: 'smooth' });
   }
 });
 
-// ===== SILVER DUST TRAIL =====
-(function initDustTrail() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
-  let lastDustTime = 0;
-  const DUST_INTERVAL = 30;
-
-  document.addEventListener('mousemove', (e) => {
-    const now = Date.now();
-    if (now - lastDustTime < DUST_INTERVAL) return;
-    lastDustTime = now;
-
-    const dust = document.createElement('div');
-    dust.className = 'dust';
-
-    const offsetX = (Math.random() - 0.5) * 10;
-    const offsetY = (Math.random() - 0.5) * 10;
-    dust.style.left = (e.clientX + offsetX) + 'px';
-    dust.style.top = (e.clientY + offsetY) + 'px';
-
-    const driftX = (Math.random() - 0.5) * 30 - 50;
-    const driftY = (Math.random() - 0.5) * 30 - 50;
-    dust.style.setProperty('--dust-x', driftX + 'px');
-    dust.style.setProperty('--dust-y', driftY + 'px');
-
-    const size = Math.random() * 2 + 2;
-    dust.style.width = size + 'px';
-    dust.style.height = size + 'px';
-
-    document.body.appendChild(dust);
-    setTimeout(() => dust.remove(), 1000);
-  }, { passive: true });
-})();
