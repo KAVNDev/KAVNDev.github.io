@@ -136,40 +136,6 @@ revealElements.forEach((el) => revealObserver.observe(el));
 
 // Navbar scroll + Back to top handled by consolidated Lenis listener below
 
-// ===== STATS COUNTER ANIMATION =====
-const statsNumbers = document.querySelectorAll('.stats__number');
-
-const counterObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = parseInt(entry.target.getAttribute('data-target'));
-        animateCounter(entry.target, target);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-
-statsNumbers.forEach((num) => counterObserver.observe(num));
-
-function animateCounter(element, target) {
-  let current = 0;
-  const duration = 1500;
-  const step = target / (duration / 30);
-
-  const timer = setInterval(() => {
-    current += step;
-    if (current >= target) {
-      element.textContent = target;
-      clearInterval(timer);
-    } else {
-      element.textContent = Math.floor(current);
-    }
-  }, 30);
-}
-
 // Scroll progress handled by consolidated Lenis listener
 
 // ===== PRELOADER =====
