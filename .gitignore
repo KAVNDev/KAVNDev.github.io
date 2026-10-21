@@ -1,2 +1,7 @@
 .vs/
 .vscode/
+.kiro/
+.DS_Store
+Thumbs.db
+node_modules/
+*.zip

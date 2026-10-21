@@ -2,48 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kian Andrei V. Naig - Support Programmer skilled in C#, .NET, and SQL Server. Specializing in root-cause debugging and backend support." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Portfolio of Kian Andrei V. Naig, a Junior .NET Developer skilled in C#, .NET, SQL Server, and root-cause debugging." />
   <meta name="author" content="Kian Andrei V. Naig" />
-  <meta property="og:title" content="KAVN - Support Programmer Portfolio" />
-  <meta property="og:description" content="Support Programmer skilled in C#, .NET, and SQL Server. Specializing in root-cause debugging and backend support." />
-  <meta property="og:image" content="img/ProfileP.png" />
+  <!-- Open Graph / social sharing — absolute URLs required by crawlers -->
+  <meta property="og:title" content="Kian Andrei V. Naig | Junior .NET Developer" />
+  <meta property="og:description" content="Portfolio of Kian Andrei V. Naig, a Junior .NET Developer skilled in C#, .NET, SQL Server, and root-cause debugging." />
+  <meta property="og:image" content="https://kavndev.github.io/img/ProfileP.png" />
+  <meta property="og:image:width" content="360" />
+  <meta property="og:image:height" content="360" />
+  <meta property="og:image:alt" content="Kian Andrei V. Naig — Junior .NET Developer" />
   <meta property="og:type" content="website" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://images.pexels.com data:; script-src 'self' 'unsafe-inline' https://unpkg.com; connect-src https://api.staticforms.xyz;" />
-  <title>KAVN | Support Programmer</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>K</text></svg>" />
+  <meta property="og:url" content="https://kavndev.github.io/" />
+  <meta property="og:site_name" content="KAVN Portfolio" />
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kian Andrei V. Naig | Junior .NET Developer" />
+  <meta name="twitter:description" content="Junior .NET Developer skilled in C#, .NET, SQL Server, and root-cause debugging." />
+  <meta name="twitter:image" content="https://kavndev.github.io/img/ProfileP.png" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; script-src 'self'; connect-src https://api.staticforms.xyz; object-src 'none'; base-uri 'self'; form-action 'self' https://api.staticforms.xyz;" />
+  <title>Kian Andrei V. Naig | Junior .NET Developer | C#, .NET, SQL Server</title>
+  <!-- Canonical URL — prevents duplicate-content indexing -->
+  <link rel="canonical" href="https://kavndev.github.io/" />
+  <!-- Favicon set -->
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180" />
+  <!-- Theme color for mobile browser chrome -->
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link
-    rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
-    as="style"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <!-- Profile image preload for LCP -->
+  <link rel="preload" href="img/ProfileP.png" as="image" fetchpriority="high" />
+  <!-- JSON-LD structured data — helps Google understand the page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kian Andrei V. Naig",
+    "url": "https://kavndev.github.io/",
+    "image": "https://kavndev.github.io/img/ProfileP.png",
+    "jobTitle": "Junior .NET Developer",
+    "description": "Junior .NET Developer with hands-on experience in C#, .NET, and SQL Server. Specialises in root-cause debugging, stored procedures, and data integrity.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Quezon City",
+      "addressCountry": "PH"
+    },
+    "sameAs": [
+      "https://github.com/KAVNDev",
+      "https://www.linkedin.com/in/kian-andrei-v-naig-338174373/"
+    ],
+    "knowsAbout": ["C#", ".NET", "ASP.NET", "SQL Server", "JavaScript", "HTML", "CSS", "Git"]
+  }
+  </script>
 </head>
 <body>
-  <!-- Preloader -->
-  <div class="preloader" id="preloader">
-    <div class="preloader__wrapper">
-      <span class="preloader__text">
-        <span class="preloader__char">K</span>
-        <span class="preloader__char">A</span>
-        <span class="preloader__char">V</span>
-        <span class="preloader__char">N</span>
-      </span>
-      <div class="preloader__bar"><div class="preloader__bar-fill"></div></div>
+  <!-- Inline SVG sprite — zero network requests for icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <!-- Font Awesome Free 6.5.2 icon paths — MIT licensed -->
+    <symbol id="icon-arrow-up" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></symbol>
+    <symbol id="icon-bug" viewBox="0 0 512 512"><path d="M256 0c53 0 96 43 96 96v3.6c0 15.7-12.7 28.4-28.4 28.4H188.4C172.7 128 160 115.3 160 99.6V96c0-53 43-96 96-96zM41.4 105.4c12.5-12.5 32.8-12.5 45.3 0l64 64c.7.7 1.4 1.4 2 2.1C163 161.2 181.2 160 200 160H312c18.8 0 37 1.2 47.3 11.5c.6-.7 1.3-1.4 2-2.1l64-64c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3l-64 64c-.7.7-1.4 1.4-2.1 2c5.8 17.1 9.5 35.6 9.5 55.2V320H472c13.3 0 24 10.7 24 24s-10.7 24-24 24H416v8c0 19.6-3.7 38.1-9.5 55.2c.7.6 1.4 1.3 2.1 2l64 64c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0l-64-64c-.7-.7-1.4-1.4-2-2.1C351 487.8 332.8 489.6 312 490l-112 0c-20.8 0-39-1.8-49.3-12.1c-.7.7-1.4 1.4-2 2.1l-64 64c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l64-64c.7-.7 1.4-1.4 2.1-2C99.7 414.1 96 395.6 96 376v-8H40c-13.3 0-24-10.7-24-24s10.7-24 24-24H96V319.5c0-19.6 3.7-38.1 9.5-55.2c-.7-.6-1.4-1.3-2.1-2l-64-64c-12.5-12.5-12.5-32.8 0-45.3z"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></symbol>
+    <symbol id="icon-circle-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol>
+    <symbol id="icon-circle-exclamation" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-384c13.3 0 24 10.7 24 24V264c0 13.3-10.7 24-24 24s-24-10.7-24-24V152c0-13.3 10.7-24 24-24zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/></symbol>
+    <symbol id="icon-clock" viewBox="0 0 512 512"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.5 33.3-6.5s4.5-25.9-6.5-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></symbol>
+    <symbol id="icon-database" viewBox="0 0 448 512"><path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/></symbol>
+    <symbol id="icon-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+    <symbol id="icon-file-lines" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></symbol>
+    <symbol id="icon-folder-open" viewBox="0 0 576 512"><path d="M88.7 223.8L0 375.8V96C0 60.7 28.7 32 64 32H181.5c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3 18.7H416c35.3 0 64 28.7 64 64v32H144c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224H544c11.5 0 22 6.1 27.7 16.1s5.7 22.3-.1 32.1l-112 192C453.9 474 443.4 480 432 480H32c-11.5 0-22-6.1-27.7-16.1s-5.7-22.3 .1-32.1l112-192z"/></symbol>
+    <symbol id="icon-headset" viewBox="0 0 512 512"><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-74.8 0-128-73.7-128-144v-16C0 155.3 114.6 32 256 32s256 123.3 256 240v16c0 70.3-53.2 144-128 144c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.2 30.4 6C401.6 159.4 314.1 80 256 80z"/></symbol>
+    <symbol id="icon-house" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4.1-2.8.1-4.2.1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2.1-2.4.2-3.6.2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9.1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></symbol>
+    <symbol id="icon-location-dot" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></symbol>
+    <symbol id="icon-paper-plane" viewBox="0 0 512 512"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></symbol>
+    <symbol id="icon-server" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V352c0-35.3-28.7-64-64-64H64zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></symbol>
+    <symbol id="icon-spinner" viewBox="0 0 512 512"><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></symbol>
+    <symbol id="icon-user" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></symbol>
+    <symbol id="icon-xmark" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></symbol>
+    <!-- Brand icons -->
+    <symbol id="icon-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+    <symbol id="icon-css3-alt" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></symbol>
+    <symbol id="icon-git-alt" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.58-17.58-17.58-46.06 0-63.64 10.54-10.54 26.19-14.22 39.46-10.42V196.27a50.5 50.5 0 0 1-11.19-54.79l-51.01-51a28.87 28.87 0 0 0-40.81 0l-179.2 179.14a28.87 28.87 0 0 0 0 40.81l195.55 195.55a28.87 28.87 0 0 0 40.81 0L439.55 276.86a28.87 28.87 0 0 0 0-40.81z"/></symbol>
+    <symbol id="icon-html5" viewBox="0 0 384 512"><path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></symbol>
+    <symbol id="icon-js" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></symbol>
+    <symbol id="icon-microsoft" viewBox="0 0 448 512"><path d="M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z"/></symbol>
+  </svg>
+
+  <!-- Skip to main content link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <!-- Loading Skeleton -->
+  <div class="skeleton-loader" id="skeletonLoader">
+    <div class="skeleton-loader__sidenav">
+      <div class="skeleton-loader__logo"></div>
+      <div class="skeleton-loader__menu">
+        <div class="skeleton-loader__menu-item"></div>
+        <div class="skeleton-loader__menu-item"></div>
+        <div class="skeleton-loader__menu-item"></div>
+        <div class="skeleton-loader__menu-item"></div>
+        <div class="skeleton-loader__menu-item"></div>
+        <div class="skeleton-loader__menu-item"></div>
+      </div>
+    </div>
+    <div class="skeleton-loader__content">
+      <div class="skeleton-loader__hero">
+        <div class="skeleton-loader__hero-left">
+          <div class="skeleton-loader__line skeleton-loader__line--short"></div>
+          <div class="skeleton-loader__line skeleton-loader__line--long"></div>
+          <div class="skeleton-loader__line skeleton-loader__line--medium"></div>
+          <div class="skeleton-loader__text-block">
+            <div class="skeleton-loader__line"></div>
+            <div class="skeleton-loader__line"></div>
+            <div class="skeleton-loader__line skeleton-loader__line--medium"></div>
+          </div>
+          <div class="skeleton-loader__buttons">
+            <div class="skeleton-loader__button"></div>
+            <div class="skeleton-loader__button"></div>
+          </div>
+        </div>
+        <div class="skeleton-loader__hero-right">
+          <div class="skeleton-loader__avatar"></div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -52,31 +136,73 @@
 
   <!-- Floating Particles -->
   <div class="particles" id="particles"></div>
-  <!-- Navbar -->
-  <header class="navbar" id="navbar">
-    <nav class="navbar__container container" aria-label="Main navigation">
-      <a href="#home" class="navbar__logo">
-        <span class="navbar__logo-text">KAVN</span>
+  <!-- Side Navigation -->
+  <aside class="sidenav" id="sidenav">
+    <div class="sidenav__header">
+      <a href="#home" class="sidenav__logo">
+        <img src="img/logo.svg" alt="KAVN" class="sidenav__logo-svg" />
       </a>
-      <button
-        class="navbar__toggle"
-        id="navToggle"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-      >
-        <span class="navbar__hamburger"></span>
-      </button>
-      <ul class="navbar__menu" id="navMenu">
-        <li><a href="#home" class="navbar__link active">Home</a></li>
-        <li><a href="#about" class="navbar__link">About</a></li>
-        <li><a href="#portfolio" class="navbar__link">Portfolio</a></li>
-        <li><a href="#resume" class="navbar__link">Resume</a></li>
-        <li><a href="#contact" class="navbar__link">Contact</a></li>
+    </div>
+    <nav class="sidenav__nav" aria-label="Main navigation">
+      <ul class="sidenav__menu">
+        <li class="sidenav__item">
+          <a href="#home" class="sidenav__link active" data-section="home">
+            <svg class="icon" aria-hidden="true"><use href="#icon-house"></use></svg>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#services" class="sidenav__link" data-section="services">
+            <svg class="icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg>
+            <span>Services</span>
+          </a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#about" class="sidenav__link" data-section="about">
+            <svg class="icon" aria-hidden="true"><use href="#icon-user"></use></svg>
+            <span>About</span>
+          </a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#portfolio" class="sidenav__link" data-section="portfolio">
+            <svg class="icon" aria-hidden="true"><use href="#icon-folder-open"></use></svg>
+            <span>Portfolio</span>
+          </a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#resume" class="sidenav__link" data-section="resume">
+            <svg class="icon" aria-hidden="true"><use href="#icon-file-lines"></use></svg>
+            <span>Resume</span>
+          </a>
+        </li>
+        <li class="sidenav__item">
+          <a href="#contact" class="sidenav__link" data-section="contact">
+            <svg class="icon" aria-hidden="true"><use href="#icon-envelope"></use></svg>
+            <span>Contact</span>
+          </a>
+        </li>
       </ul>
     </nav>
-  </header>
+    <div class="sidenav__footer">
+      <div class="sidenav__socials">
+        <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="sidenav__social-link">
+          <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="sidenav__social-link">
+          <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
 
-  <main>
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidenav">
+    <span class="mobile-menu-toggle__line"></span>
+    <span class="mobile-menu-toggle__line"></span>
+    <span class="mobile-menu-toggle__line"></span>
+  </button>
+
+  <main class="main-content" id="main">
     <!-- Home Section -->
     <section class="hero section" id="home">
       <div class="hero__code-decoration" aria-hidden="true">
@@ -87,12 +213,13 @@
           <p class="hero__greeting" id="heroGreeting">Hello, I'm</p>
           <h1 class="hero__name">KIAN ANDREI V. NAIG</h1>
           <h2 class="hero__title">
-            <span class="typewriter" id="typewriter"></span>
-            <span class="typewriter__cursor">|</span>
+            <span class="sr-only">Junior .NET Developer</span>
+            <span class="typewriter" id="typewriter" aria-hidden="true">Junior .NET Developer</span>
+            <span class="typewriter__cursor" aria-hidden="true">|</span>
           </h2>
 
           <p class="hero__description">
-              A Support Programmer skilled in C#, .NET, and SQL Server, specializing in root-cause debugging, maintaining backend data integrity, and translating complex technical solutions into clear, user-centered answers.
+            Junior .NET Developer with hands-on experience in C#, .NET, and SQL Server. I trace bugs to their root cause, protect data integrity, and explain technical fixes in plain language.
           </p>
           <div class="hero__actions">
             <a href="#portfolio" class="btn btn--primary btn--magnetic">View My Work</a>
@@ -100,20 +227,43 @@
           </div>
           <div class="hero__social">
             <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hero__social-link">
-              <i class="fa-brands fa-github"></i>
+              <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
             </a>
             <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hero__social-link">
-              <i class="fa-brands fa-linkedin"></i>
+              <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
             </a>
           </div>
         </div>
         <div class="hero__image">
           <div class="hero__scroll-hint" aria-hidden="true">
             <span>Scroll to explore</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
           </div>
           <div class="hero__avatar">
-            <img src="img/ProfileP.png" alt="Kian Andrei V. Naig" class="hero__avatar-img hero__avatar-img--lazy" fetchpriority="high" draggable="false" />
+            <svg
+              class="hero__avatar-svg"
+              viewBox="0 0 520 520"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              role="img"
+              aria-label="Kian Andrei V. Naig"
+            >
+              <defs>
+                <clipPath id="avatarClip">
+                  <circle cx="260" cy="260" r="258" />
+                </clipPath>
+              </defs>
+              <!-- Subtle ring -->
+              <circle cx="260" cy="260" r="259" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" />
+              <image
+                href="img/ProfileP.png"
+                x="0" y="0"
+                width="520" height="520"
+                clip-path="url(#avatarClip)"
+                preserveAspectRatio="xMidYMid slice"
+                class="hero__avatar-img hero__avatar-img--lazy"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -123,27 +273,27 @@
     <section class="services section" id="services">
       <div class="container">
         <h2 class="section__title">What I Do</h2>
-        <p class="section__subtitle">Core areas where I deliver value every day.</p>
+        <p class="section__subtitle">What I work on every day.</p>
         <div class="services__grid">
           <button class="services__card" data-modal="modal-debugging">
-            <div class="services__icon"><i class="fa-solid fa-bug"></i></div>
+            <div class="services__icon"><svg class="icon" aria-hidden="true"><use href="#icon-bug"></use></svg></div>
             <h3 class="services__card-title">Debugging</h3>
-            <p class="services__card-text">Trace complex bugs across frontend and backend layers to their root cause.</p>
+            <p class="services__card-text">Trace bugs across the frontend, backend, and database to their root cause.</p>
           </button>
           <button class="services__card" data-modal="modal-backend">
-            <div class="services__icon"><i class="fa-solid fa-server"></i></div>
+            <div class="services__icon"><svg class="icon" aria-hidden="true"><use href="#icon-server"></use></svg></div>
             <h3 class="services__card-title">Backend Support</h3>
-            <p class="services__card-text">Maintain and support enterprise applications using C#, .NET, and SQL Server.</p>
+            <p class="services__card-text">Maintain and support business applications built with C#, .NET, and SQL Server.</p>
           </button>
           <button class="services__card" data-modal="modal-database">
-            <div class="services__icon"><i class="fa-solid fa-database"></i></div>
+            <div class="services__icon"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg></div>
             <h3 class="services__card-title">Database Management</h3>
-            <p class="services__card-text">Write, tune, and fix stored procedures to keep data integrity intact.</p>
+            <p class="services__card-text">Write, debug, and optimize stored procedures and queries to keep data accurate.</p>
           </button>
           <button class="services__card" data-modal="modal-support">
-            <div class="services__icon"><i class="fa-solid fa-headset"></i></div>
-            <h3 class="services__card-title">Customer Support</h3>
-            <p class="services__card-text">Translate complex technical issues into clear, simple language for end users.</p>
+            <div class="services__icon"><svg class="icon" aria-hidden="true"><use href="#icon-headset"></use></svg></div>
+            <h3 class="services__card-title">User Support</h3>
+            <p class="services__card-text">Explain technical issues in plain language and resolve tickets within SLA.</p>
           </button>
         </div>
       </div>
@@ -159,42 +309,52 @@
         <div class="about__grid">
           <div class="about__story">
               <h3 class="about__heading">Profile</h3>
-            <p class="about__text">
-                Support Programmer with hands-on experience in C#, .NET, SQL Server, and JavaScript, focused on system maintenance, debugging, 
-                and backend support for student information systems and internal applications. 
-                Skilled in writing, debugging, and optimizing stored procedures, resolving production issues, and safeguarding data integrity across day-to-day operations. 
-                Experienced in tracing complex bugs to their root cause — including faulty data inserts, missing validations, broken stored procedures, 
-                and sync issues — then implementing fixes that prevent recurrence. Comfortable working across both frontend and backend layers to diagnose 
-                and resolve issues efficiently. Communicates technical solutions clearly to non-technical users 
-                including students, staff, and teachers, translating complex fixes into simple, understandable language. 
-                Collaborates effectively within small teams, regularly coordinates with senior developers on escalated issues, 
-                and proactively seeks to understand not just how systems work but why. 
-                Committed to continuous learning and delivering reliable, user-centered solutions that keep operations running smoothly.
-            </p>
+              <p class="about__text">
+                I’m a Junior .NET Developer with hands-on experience in C#, .NET, SQL Server, and JavaScript. Most recently, I worked as a Support Programmer at AMA Education System, where I maintained and supported the student portal and internal applications, with a focus on debugging, stored procedures, and data integrity.
+              </p>
+              <p class="about__text">
+                I trace bugs to their root cause, such as faulty data inserts, missing validations, broken stored procedures, and sync issues, then implement fixes that prevent them from coming back. I’m comfortable working across the frontend, backend, and database.
+              </p>
+              <p class="about__text">
+                I explain technical fixes in plain language to students, teachers, and staff, and I’ve worked closely with senior developers on escalated issues. I like to understand not just how a system works, but why. Wherever I go, my goal is to keep learning, keep improving, and grow into a stronger developer with every project and every team I join.
+              </p>
           </div>
           <div class="about__skills">
             <h3 class="about__heading">Technical Skills</h3>
             <div class="about__skills-grid">
               <div class="about__skill-group">
-                <h4 class="about__skill-category">Frontend</h4>
+                <h4 class="about__skill-category">Languages</h4>
                 <ul class="about__skill-list">
-                  <li class="about__skill-item"><i class="fa-brands fa-microsoft"></i> C#</li>
-                  <li class="about__skill-item"><i class="fa-brands fa-js"></i> JavaScript</li>
-                  <li class="about__skill-item"><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                  <li class="about__skill-item"><i class="fa-brands fa-html5"></i> HTML</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-microsoft"></use></svg> C#</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-js"></use></svg> JavaScript</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg> SQL</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-html5"></use></svg> HTML</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-css3-alt"></use></svg> CSS</li>
                 </ul>
               </div>
               <div class="about__skill-group">
-                <h4 class="about__skill-category">Backend</h4>
+                <h4 class="about__skill-category">Frameworks</h4>
                 <ul class="about__skill-list">
-                  <li class="about__skill-item"><i class="fa-solid fa-database"></i> SQL</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg> .NET</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg> ASP.NET</li>
+                </ul>
+              </div>
+              <div class="about__skill-group">
+                <h4 class="about__skill-category">Database</h4>
+                <ul class="about__skill-list">
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg> Microsoft SQL Server</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-server"></use></svg> SQL Server Management Studio (SSMS)</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg> Stored Procedures</li>
                 </ul>
               </div>
               <div class="about__skill-group">
                 <h4 class="about__skill-category">Tools</h4>
                 <ul class="about__skill-list">
-                  <li class="about__skill-item"><i class="fa-solid fa-code"></i> Visual Studio Code (VS)</li>
-                  <li class="about__skill-item"><i class="fa-solid fa-server"></i> SQL Server Management Studio (SSMS)</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg> Visual Studio</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-code"></use></svg> Visual Studio Code</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-git-alt"></use></svg> Git</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg> GitHub</li>
+                  <li class="about__skill-item"><svg class="icon" aria-hidden="true"><use href="#icon-headset"></use></svg> Freshdesk</li>
                 </ul>
               </div>
             </div>
@@ -211,12 +371,12 @@
           A selection of projects that showcase my skills and experience in building real-world applications.
         </p>
         <div class="portfolio__grid">
-          <article class="portfolio__card portfolio__card--flip">
+          <article class="portfolio__card portfolio__card--flip" tabindex="0" role="button" aria-label="Project card - Press Enter to flip">
             <div class="portfolio__card-inner">
               <div class="portfolio__card-front">
                 <div class="portfolio__card-content">
                   <h3 class="portfolio__card-title">WORK IN PROGRESS</h3>
-                  <p class="portfolio__card-description">Still in development. Hover to see more.</p>
+                  <p class="portfolio__card-description">Still in development. Tap or hover to see more.</p>
                   <div class="portfolio__card-tags">
                     <span class="portfolio__tag">Coming Soon</span>
                   </div>
@@ -227,66 +387,12 @@
                   <h3 class="portfolio__card-title">Details</h3>
                   <p class="portfolio__card-description">A personal project is currently being planned. Stay tuned for updates on GitHub.</p>
                   <div class="portfolio__card-links">
-                    <a href="https://github.com/KAVNDev" class="portfolio__link"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+                    <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" class="portfolio__link"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg> GitHub Profile</a>
                   </div>
                 </div>
               </div>
             </div>
           </article>
-          <!--<article class="portfolio__card">
-            <div class="portfolio__card-content">
-              <h3 class="portfolio__card-title">Task Management App</h3>
-              <p class="portfolio__card-description">
-                A collaborative project management tool with real-time updates, drag-and-drop boards, and team workspace features.
-              </p>
-              <div class="portfolio__card-tags">
-                <span class="portfolio__tag">TypeScript</span>
-                <span class="portfolio__tag">Next.js</span>
-                <span class="portfolio__tag">PostgreSQL</span>
-                <span class="portfolio__tag">WebSocket</span>
-              </div>
-              <div class="portfolio__card-links">
-                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
-              </div>
-            </div>
-          </article>
-          <article class="portfolio__card">
-            <div class="portfolio__card-content">
-              <h3 class="portfolio__card-title">Weather Dashboard</h3>
-              <p class="portfolio__card-description">
-                A responsive weather dashboard that displays current conditions, forecasts, and interactive maps using multiple weather APIs.
-              </p>
-              <div class="portfolio__card-tags">
-                <span class="portfolio__tag">React</span>
-                <span class="portfolio__tag">REST API</span>
-                <span class="portfolio__tag">Chart.js</span>
-                <span class="portfolio__tag">CSS Grid</span>
-              </div>
-              <div class="portfolio__card-links">
-                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
-              </div>
-            </div>
-          </article>
-          <article class="portfolio__card">
-            <div class="portfolio__card-content">
-              <h3 class="portfolio__card-title">Blog Platform</h3>
-              <p class="portfolio__card-description">
-                A content management system with markdown support, SEO optimization, comment system, and an admin dashboard.
-              </p>
-              <div class="portfolio__card-tags">
-                <span class="portfolio__tag">Next.js</span>
-                <span class="portfolio__tag">Prisma</span>
-                <span class="portfolio__tag">PostgreSQL</span>
-                <span class="portfolio__tag">MDX</span>
-              </div>
-              <div class="portfolio__card-links">
-                <a href="#" class="portfolio__link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-                <a href="#" class="portfolio__link"><i class="fa-brands fa-github"></i> Source Code</a>
-              </div>
-            </div>
-          </article>-->
         </div>
       </div>
     </section>
@@ -300,7 +406,7 @@
         <div class="resume__content">
           <div class="resume__section">
             <h3 class="resume__section-title">
-              <i class="fa-solid fa-briefcase"></i> Work Experience
+              <svg class="icon" aria-hidden="true"><use href="#icon-briefcase"></use></svg> Work Experience
             </h3>
             <div class="resume__timeline">
               <div class="resume__item">
@@ -309,77 +415,37 @@
                     <h4 class="resume__item-role">Support Programmer</h4>
                     <p class="resume__item-company">AMA Education System (AMAES)</p>
                   </div>
-                  <span class="resume__item-period">November, 2025 – Present</span>
+                  <span class="resume__item-period">November 2025 – October 2026</span>
                 </div>
                 <ul class="resume__item-highlights">
-                  <li class="resume__item-point">Full-Stack Application Support: Maintain and support the core student portal 
-                    and internal enterprise applications using C#, .NET, SQL Server, and JavaScript—building full working proficiency from scratch.</li>
-                  <li class="resume__item-point">Root-Cause Troubleshooting & Debugging: Diagnose complex frontend/backend bugs, trace system anomalies across logs and codebases, 
-                    and resolve underlying issues such as broken stored procedures, sync failures, and missing validation checks.</li>
-                  <li class="resume__item-point">Database & Query Optimization: Manage SQL Server databases by writing and tuning stored procedures, resolving slow-running queries, 
-                    and performing data integrity fixes to prevent recurring system errors.</li>
-                  <li class="resume__item-point">Cross-Functional Communication: Serve as the primary technical point of contact for students, teachers, 
-                    and staff—translating complex technical solutions into clear, simple language and providing senior developers with actionable context for escalation.</li>
-                  <li class="resume__item-point">System Growth & Continuous Improvement: Collaborate with senior engineers on deployments, updates, 
-                    and requirement analyses, actively expanding backend capabilities to prepare for high-complexity feature development.</li>
+                  <li class="resume__item-point"><strong>Application Development & Support:</strong> Developed and maintained the student portal and internal applications for the main and franchise systems using C#, .NET, SQL Server, and JavaScript.</li>
+                  <li class="resume__item-point"><strong>Root Cause Troubleshooting:</strong> Diagnosed frontend and backend bugs by reading error logs and tracing issues through the application and database. Resolved causes such as broken stored procedures, sync failures, and missing validation.</li>
+                  <li class="resume__item-point"><strong>Database & Query Optimization:</strong> Wrote, debugged, and optimized SQL Server stored procedures, diagnosed slow-running queries, and performed data integrity fixes to prevent recurring errors.</li>
+                  <li class="resume__item-point"><strong>Ticket Resolution & User Support:</strong> Resolved Freshdesk support tickets within SLA benchmarks and served as the main technical contact for students, teachers, and staff. Explained fixes in plain language and escalated to senior developers with clear context.</li>
+                  <li class="resume__item-point"><strong>Collaboration & Delivery:</strong> Worked with senior developers and business teams to analyze requirements and assist with system updates and deployments.</li>
                 </ul>
               </div>
-              <!--<div class="resume__item">
+              <div class="resume__item">
                 <div class="resume__item-header">
                   <div>
-                    <h4 class="resume__item-role">Full-Stack Developer</h4>
-                    <p class="resume__item-company">Digital Agency</p>
+                    <h4 class="resume__item-role">IT Support Intern (OJT)</h4>
+                    <p class="resume__item-company">eVA Outsourcing</p>
                   </div>
-                  <span class="resume__item-period">2021 – 2023</span>
+                  <span class="resume__item-period">July 2024 – August 2024</span>
                 </div>
                 <ul class="resume__item-highlights">
-                  <li class="resume__item-point">Developed and shipped 12+ client projects using React and Node.js</li>
-                  <li class="resume__item-point">Built reusable component libraries reducing development time by 40%</li>
-                  <li class="resume__item-point">Collaborated with designers to implement pixel-perfect responsive interfaces</li>
+                  <li class="resume__item-point"><strong>IT Support & Troubleshooting:</strong> Diagnosed hardware and computer issues to reduce staff downtime and helped maintain company hardware.</li>
+                  <li class="resume__item-point"><strong>Lead Generation Research:</strong> Researched and compiled target job titles from online sources to support the sales and marketing team.</li>
+                  <li class="resume__item-point"><strong>Graphic Design:</strong> Designed posters and marketing materials for company branding and promotions.</li>
                 </ul>
-              </div>-->
-              <!--<div class="resume__item">
-                <div class="resume__item-header">
-                  <div>
-                    <h4 class="resume__item-role">Junior Web Developer</h4>
-                    <p class="resume__item-company">Startup Inc.</p>
-                  </div>
-                  <span class="resume__item-period">2020 – 2021</span>
-                </div>
-                <ul class="resume__item-highlights">
-                  <li class="resume__item-point">Built and maintained features for a SaaS application serving 10k+ users</li>
-                  <li class="resume__item-point">Optimized database queries resulting in 50% faster page loads</li>
-                  <li class="resume__item-point">Participated in agile sprints and contributed to product roadmap discussions</li>
-                </ul>
-              </div>-->
-            </div>
-          </div>
-          <div class="resume__section">
-            <h3 class="resume__section-title">
-              <i class="fa-solid fa-graduation-cap"></i> Education
-            </h3>
-            <div class="resume__timeline">
-                <div class="resume__item">
-                    <div class="resume__item-header">
-                        <div>
-                            <h4 class="resume__item-role">Bachelor of Science in Computer Science</h4>
-                            <p class="resume__item-company">Major in Information Systems</p>
-                            <p class="resume__item-company">University of Antique (UA) - Main Campus</p>
-                        </div>
-                        <span class="resume__item-period">2022 – 2025</span>
-                    </div>
-                    <p class="resume__item-details">Focus on programming fundamentals, computer literacy, computer hardware, and computer networking.</p>
-                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!--<div class="resume__download">
-          <a href="#" class="btn btn--primary"><i class="fa-solid fa-download"></i> Download Full Resume</a>
-        </div>-->
       </div>
     </section>
 
-    <!-- Contact Section -->y
+    <!-- Contact Section -->
     <section class="contact section" id="contact">
       <div class="container">
         <h2 class="section__title">GET IN TOUCH</h2>
@@ -387,21 +453,23 @@
         <div class="contact__grid">
           <div class="contact__info">
             <div class="contact__info-item">
-              <div class="contact__info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact__info-icon"><svg class="icon" aria-hidden="true"><use href="#icon-envelope"></use></svg></div>
               <div>
                 <h4 class="contact__info-title">Email</h4>
-                <a href="mailto:andreinaig00912@gmail.com" class="contact__info-value contact__email-protected" oncopy="return false" oncut="return false">andreinaig00912@gmail.com</a>
+                <a href="#" class="contact__info-value" id="emailLink">
+                  <noscript>andreinaig00912[at]gmail.com</noscript>
+                </a>
               </div>
             </div>
             <div class="contact__info-item">
-              <div class="contact__info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact__info-icon"><svg class="icon" aria-hidden="true"><use href="#icon-location-dot"></use></svg></div>
               <div>
                 <h4 class="contact__info-title">Location</h4>
                 <p class="contact__info-value">Quezon City, Philippines</p>
               </div>
             </div>
             <div class="contact__info-item">
-              <div class="contact__info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact__info-icon"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg></div>
               <div>
                 <h4 class="contact__info-title">Availability</h4>
                 <p class="contact__info-value">Currently open to freelance and full-time roles</p>
@@ -409,34 +477,38 @@
             </div>
             <div class="contact__socials">
               <a href="https://github.com/KAVNDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="contact__social-link">
-                <i class="fa-brands fa-github"></i>
+                <svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg>
               </a>
               <a href="https://www.linkedin.com/in/kian-andrei-v-naig-338174373/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact__social-link">
-                <i class="fa-brands fa-linkedin"></i>
+                <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg>
               </a>
             </div>
           </div>
-          <form class="contact__form" id="contactForm" action="https://api.staticforms.xyz/submit" method="POST">
-            <div class="contact__form-success" id="formSuccess">
-              <i class="fa-solid fa-circle-check"></i>
+          <form class="contact__form" id="contactForm" action="https://api.staticforms.xyz/submit" method="POST" aria-describedby="formSuccess formError">
+            <div class="contact__form-success" id="formSuccess" role="status" aria-live="polite" style="display: none;">
+              <svg class="icon" aria-hidden="true"><use href="#icon-circle-check"></use></svg>
               <p>Message sent successfully!</p>
+            </div>
+            <div class="contact__form-error" id="formError" role="alert" style="display: none;">
+              <svg class="icon" aria-hidden="true"><use href="#icon-circle-exclamation"></use></svg>
+              <p id="formErrorText">Couldn't send. Please email me directly.</p>
             </div>
             <input type="hidden" name="accessKey" id="formAccessKey" value="" />
             <input type="hidden" name="redirectTo" value="" />
-            <input type="text" name="honeypot" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="text" name="honeypot" class="form-honeypot" tabindex="-1" autocomplete="off" />
             <div class="contact__form-row">
               <div class="contact__form-group">
                 <label for="name" class="contact__label">Name</label>
                 <div class="contact__input-wrap">
-                  <input type="text" id="name" name="name" required class="contact__input" placeholder="Your name" />
-                  <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+                  <input type="text" id="name" name="name" required class="contact__input" placeholder="Your name" autocomplete="name" />
+                  <span class="contact__valid-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></span>
                 </div>
               </div>
               <div class="contact__form-group">
                 <label for="email" class="contact__label">Email</label>
                 <div class="contact__input-wrap">
-                  <input type="email" id="email" name="email" required class="contact__input" placeholder="your@email.com" />
-                  <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+                  <input type="email" id="email" name="email" required class="contact__input" placeholder="your@email.com" autocomplete="email" />
+                  <span class="contact__valid-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></span>
                 </div>
               </div>
             </div>
@@ -444,18 +516,18 @@
               <label for="subject" class="contact__label">Subject</label>
               <div class="contact__input-wrap">
                 <input type="text" id="subject" name="subject" required class="contact__input" placeholder="What's this about?" />
-                <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+                <span class="contact__valid-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></span>
               </div>
             </div>
             <div class="contact__form-group">
               <label for="message" class="contact__label">Message</label>
               <div class="contact__input-wrap">
                 <textarea id="message" name="message" required rows="6" class="contact__input contact__textarea" placeholder="Tell me about your project..."></textarea>
-                <span class="contact__valid-icon"><i class="fa-solid fa-check"></i></span>
+                <span class="contact__valid-icon"><svg class="icon" aria-hidden="true"><use href="#icon-check"></use></svg></span>
               </div>
             </div>
             <button type="submit" class="btn btn--primary btn--magnetic contact__submit">
-              <i class="fa-solid fa-paper-plane"></i> Send Message
+              <svg class="icon" aria-hidden="true"><use href="#icon-paper-plane"></use></svg> Send Message
             </button>
           </form>
         </div>
@@ -467,40 +539,44 @@
   <div class="modal" id="modal-debugging" aria-hidden="true">
     <div class="modal__overlay" data-close></div>
     <div class="modal__content" role="dialog" aria-labelledby="modal-debugging-title">
-      <button class="modal__close" data-close aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div class="modal__icon"><i class="fa-solid fa-bug"></i></div>
+      <button class="modal__close" data-close aria-label="Close modal"><svg class="icon" aria-hidden="true"><use href="#icon-xmark"></use></svg></button>
+      <div class="modal__icon"><svg class="icon" aria-hidden="true"><use href="#icon-bug"></use></svg></div>
       <h3 class="modal__title" id="modal-debugging-title">Debugging</h3>
-      <p class="modal__text">Trace complex bugs across frontend and backend layers to their root cause.</p>
+      <p class="modal__text">Trace bugs across the frontend, backend, and database to their root cause.</p>
+      <p class="modal__text">For example, I once tracked down a student enrollment issue where records were appearing duplicated in the portal. I traced it through the frontend submission, found a missing transaction rollback in the backend service, and discovered the stored procedure was executing twice due to a retry loop. I added proper error handling, fixed the transaction scope, and prevented future duplicates.</p>
     </div>
   </div>
 
   <div class="modal" id="modal-backend" aria-hidden="true">
     <div class="modal__overlay" data-close></div>
     <div class="modal__content" role="dialog" aria-labelledby="modal-backend-title">
-      <button class="modal__close" data-close aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div class="modal__icon"><i class="fa-solid fa-server"></i></div>
+      <button class="modal__close" data-close aria-label="Close modal"><svg class="icon" aria-hidden="true"><use href="#icon-xmark"></use></svg></button>
+      <div class="modal__icon"><svg class="icon" aria-hidden="true"><use href="#icon-server"></use></svg></div>
       <h3 class="modal__title" id="modal-backend-title">Backend Support</h3>
-      <p class="modal__text">Maintain and support enterprise applications using C#, .NET, and SQL Server.</p>
+      <p class="modal__text">Maintain and support business applications built with C#, .NET, and SQL Server.</p>
+      <p class="modal__text">At AMA Education System, I maintained the student portal's backend services written in C# and ASP.NET. I fixed bugs in enrollment processing, grade submission, and user authentication modules. I also worked on adding validation rules, improving error logging, and ensuring data consistency across multiple database tables during nightly batch jobs.</p>
     </div>
   </div>
 
   <div class="modal" id="modal-database" aria-hidden="true">
     <div class="modal__overlay" data-close></div>
     <div class="modal__content" role="dialog" aria-labelledby="modal-database-title">
-      <button class="modal__close" data-close aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div class="modal__icon"><i class="fa-solid fa-database"></i></div>
+      <button class="modal__close" data-close aria-label="Close modal"><svg class="icon" aria-hidden="true"><use href="#icon-xmark"></use></svg></button>
+      <div class="modal__icon"><svg class="icon" aria-hidden="true"><use href="#icon-database"></use></svg></div>
       <h3 class="modal__title" id="modal-database-title">Database Management</h3>
-      <p class="modal__text">Write, tune, and fix stored procedures to keep data integrity intact.</p>
+      <p class="modal__text">Write, debug, and optimize stored procedures and queries to keep data accurate.</p>
+      <p class="modal__text">I regularly wrote and debugged stored procedures for student data imports, grade calculations, and report generation. I optimized slow-running queries by adding proper indexes, rewriting joins, and eliminating unnecessary subqueries. I also maintained referential integrity by ensuring cascading updates and deletes were handled correctly across related tables.</p>
     </div>
   </div>
 
   <div class="modal" id="modal-support" aria-hidden="true">
     <div class="modal__overlay" data-close></div>
     <div class="modal__content" role="dialog" aria-labelledby="modal-support-title">
-      <button class="modal__close" data-close aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div class="modal__icon"><i class="fa-solid fa-headset"></i></div>
-      <h3 class="modal__title" id="modal-support-title">Customer Support</h3>
-      <p class="modal__text">Translate complex technical issues into clear, simple language for end users.</p>
+      <button class="modal__close" data-close aria-label="Close modal"><svg class="icon" aria-hidden="true"><use href="#icon-xmark"></use></svg></button>
+      <div class="modal__icon"><svg class="icon" aria-hidden="true"><use href="#icon-headset"></use></svg></div>
+      <h3 class="modal__title" id="modal-support-title">User Support</h3>
+      <p class="modal__text">Explain technical issues in plain language and resolve tickets within SLA.</p>
+      <p class="modal__text">I handled support tickets from students, teachers, and staff who couldn't log in, had missing grades, or encountered errors during enrollment. I explained technical issues like "your session expired" or "the database is being updated" in plain language, and I always provided next steps. I met our SLA by prioritizing critical issues and escalating complex bugs to senior developers with clear reproduction steps.</p>
     </div>
   </div>
 
@@ -513,7 +589,7 @@
 
   <!-- Back to Top Bubble -->
   <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
+    <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up"></use></svg>
   </a>
 
   <!-- Background layers -->
@@ -522,7 +598,7 @@
   <div class="noise" aria-hidden="true"></div>
   <div class="rhythm-lines" aria-hidden="true"></div>
 
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/vendor/lenis.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
