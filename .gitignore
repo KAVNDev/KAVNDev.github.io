@@ -1,7 +1,58 @@
+# IDE and editor folders
 .vs/
 .vscode/
 .kiro/
+
+# Kiro hooks and agent config
+.kiro/hooks/
+.kiro/settings/
+.kiro/steering/
+.kiro/agents/
+
+# OS files
 .DS_Store
 Thumbs.db
-node_modules/
+desktop.ini
+
+# Archives and exports
 *.zip
+*.rar
+*.tar
+*.tar.gz
+*.7z
+
+# Personal and sensitive files
+*.env
+*.env.local
+*.env.*
+secrets.*
+credentials.*
+config.local.*
+private.*
+
+# Personal images not for deployment
+img/personal/
+img/private/
+*.psd
+*.ai
+*.afdesign
+*.afphoto
+*.xcf
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node (if ever used)
+node_modules/
+package-lock.json
+
+# Build output (if ever used)
+/dist/
+/build/
+/.cache/
+
+# Temp files
+*.tmp
+*.temp
+~$*

@@ -1,11 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
-  <!-- Code bracket: < -->
-  <path d="M20 15 L8 30 L20 45" stroke="#ffc93c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <!-- Forward slash: / -->
-  <path d="M30 45 L38 15" stroke="#ffc93c" stroke-width="3" stroke-linecap="round" fill="none"/>
-  <!-- Code bracket: > -->
-  <path d="M46 15 L58 30 L46 45" stroke="#ffc93c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 400" fill="none">
+  <!-- K letter -->
+  <path d="M 155,120 L 155,310 M 155,215 L 230,120 M 155,215 L 230,310" stroke="#ffffff" stroke-width="32" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
   
-  <!-- KAVN text -->
-  <text x="72" y="43" font-family="'Playfair Display', Georgia, serif" font-size="36" font-weight="800" fill="#ffc93c" letter-spacing="0.05em">KAVN</text>
+  <!-- I letter -->
+  <rect x="248" y="120" width="32" height="190" fill="#ffffff"/>
+  
+  <!-- Large A as diamond/triangle with code symbol -->
+  <g>
+    <!-- Diamond outline -->
+    <path d="M 370,100 L 445,215 L 370,330 L 295,215 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Terminal prompt inside: >_ -->
+    <g transform="translate(340, 215)">
+      <path d="M 0,-10 L 15,0 L 0,10" stroke="#2d3436" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line x1="20" y1="12" x2="38" y2="12" stroke="#2d3436" stroke-width="8" stroke-linecap="round"/>
+    </g>
+  </g>
+  
+  <!-- N letter -->
+  <path d="M 463,310 L 463,120 L 545,310 L 545,120" stroke="#ffffff" stroke-width="32" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  
+  <!-- Space between KIAN and KAVN -->
+  
+  <!-- K letter (second) -->
+  <path d="M 595,120 L 595,310 M 595,215 L 670,120 M 595,215 L 670,310" stroke="#ffffff" stroke-width="32" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  
+  <!-- A letter (regular) -->
+  <path d="M 688,310 L 735,120 L 782,310 M 705,235 L 765,235" stroke="#ffffff" stroke-width="32" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  
+  <!-- V letter -->
+  <path d="M 800,120 L 850,310 L 900,120" stroke="#ffffff" stroke-width="32" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  
+  <!-- N letter (second) -->
+  <path d="M 918,310 L 918,120 L 1000,310 L 1000,120" stroke="#ffffff" stroke-width="32" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+  
+  <!-- Tagline below -->
+  <g transform="translate(495, 360)">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="20" font-weight="600" letter-spacing="3">
+      <tspan fill="#b8860b">PROGRAMMER</tspan>
+      <tspan fill="#ffffff"> / SOFTWARE ENGINEER</tspan>
+    </text>
+  </g>
 </svg>
