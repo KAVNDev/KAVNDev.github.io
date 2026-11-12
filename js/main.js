@@ -100,14 +100,14 @@ function highlightNavLink() {
   const domain = 'gmail';
   const tld = 'com';
   const email = `${user}@${domain}.${tld}`;
-  
+
   // Update contact info link
   const emailLink = document.getElementById('emailLink');
   if (emailLink) {
     emailLink.href = `mailto:${email}`;
     emailLink.textContent = email;
   }
-  
+
   // Update error message
   const formErrorText = document.getElementById('formErrorText');
   if (formErrorText) {

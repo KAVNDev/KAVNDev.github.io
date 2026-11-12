@@ -121,8 +121,8 @@
   position: absolute;
   top: -100px;
   left: 0;
-  background: #ffffff;
-  color: #0a0a0a;
+  background: var(--color-accent);
+  color: var(--color-bg);
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: 600;
@@ -136,14 +136,14 @@
 
 /* ===== FOCUS STYLES ===== */
 :focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
 .contact__input:focus-visible {
-  outline: 2px solid rgb(255 255 255 / 0.8);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
-  border-color: rgb(255 255 255 / 0.4);
+  border-color: var(--color-accent);
 }
 
 /* ===== SCREEN READER ONLY ===== */
@@ -169,15 +169,21 @@
 }
 
 :root {
-  --color-black: #121212;
-  --color-dark: #262626;
+  /* New Color Palette */
+  --color-bg: #2b2d31;           /* Gray - dominating background */
+  --color-text: #d9dadc;         /* Silver - primary text */
+  --color-accent: #ffc93c;       /* Yellow - buttons, highlights, accents */
+  
+  /* Legacy support - mapped to new palette */
+  --color-black: #2b2d31;
+  --color-dark: #2b2d31;
   --color-gray-700: #404040;
   --color-gray-500: #6b6b6b;
   --color-gray-300: #a3a3a3;
-  --color-border: #e5e5e5;
-  --color-light: #efefef;
-  --color-card: #ffffff;
-  --color-bg: #f8f9fa;
+  --color-border: rgba(217, 218, 220, 0.15);
+  --color-light: #d9dadc;
+  --color-card: rgba(217, 218, 220, 0.05);
+  
   --sidenav-width: 280px;
   --sidenav-collapsed-width: 80px;
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -202,8 +208,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-dark);
-  background-color: #0a0a0a;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   background-image: url('../img/bg.jpg');
@@ -222,10 +228,10 @@ body::before {
   background:
     linear-gradient(
       to bottom,
-      rgb(0 0 0 / 0.6) 0%,
-      rgb(4 4 12 / 0.7) 35%,
-      rgb(6 6 16 / 0.75) 70%,
-      rgb(0 0 0 / 0.8) 100%
+      rgb(43 45 49 / 0.7) 0%,
+      rgb(43 45 49 / 0.85) 35%,
+      rgb(43 45 49 / 0.9) 70%,
+      rgb(43 45 49 / 0.95) 100%
     );
   z-index: 0;
   pointer-events: none;
@@ -274,7 +280,7 @@ button {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 1.2rem + 4vw, 2.5rem);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 1rem;
   text-align: center;
   letter-spacing: -0.02em;
@@ -282,7 +288,7 @@ button {
 
 .section__subtitle {
   font-size: clamp(0.9375rem, 0.875rem + 0.3vw, 1.0625rem);
-  color: rgb(255 255 255 / 0.75);
+  color: rgba(217, 218, 220, 0.75);
   text-align: center;
   max-width: 65ch;
   margin: 0 auto 3.5rem;
@@ -460,7 +466,7 @@ button {
 
 .sidenav__logo {
   display: block;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .sidenav__logo-svg {
@@ -488,7 +494,7 @@ button {
   align-items: center;
   gap: 1rem;
   padding: 0.875rem 1rem;
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   font-size: 0.9375rem;
   font-weight: 500;
   border-radius: 10px;
@@ -506,13 +512,13 @@ button {
 
 .sidenav__link:hover {
   background: rgb(255 255 255 / 0.08);
-  color: #ffffff;
+  color: var(--color-text);
   transform: translateX(4px);
 }
 
 .sidenav__link.active {
   background: rgb(255 255 255 / 0.12);
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .sidenav__link.active::before {
@@ -523,7 +529,7 @@ button {
   transform: translateY(-50%);
   width: 3px;
   height: 24px;
-  background: #ffffff;
+  background: var(--color-accent);
   border-radius: 0 2px 2px 0;
 }
 
@@ -546,15 +552,15 @@ button {
   height: 40px;
   border-radius: 50%;
   border: 1px solid rgb(255 255 255 / 0.2);
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   font-size: 1rem;
   transition: var(--transition);
 }
 
 .sidenav__social-link:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--color-black);
+  background: var(--color-accent);
+  border-color: var(--color-text);
+  color: var(--color-bg);
   transform: translateY(-2px);
 }
 
@@ -577,13 +583,13 @@ button {
   z-index: 1001;
   transition: var(--transition);
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgb(255 255 255 / 0.1);
+  -webkit-tap-highlight-color: rgba(217, 218, 220, 0.1);
 }
 
 .mobile-menu-toggle__line {
   width: 20px;
   height: 2px;
-  background: #ffffff;
+  background: var(--color-accent);
   border-radius: 2px;
   transition: var(--transition);
 }
@@ -622,33 +628,34 @@ button {
   overflow: hidden;
   cursor: pointer;
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgb(255 255 255 / 0.1);
+  -webkit-tap-highlight-color: rgba(217, 218, 220, 0.1);
   min-height: 44px;
 }
 
 .btn--primary {
-  background: #ffffff;
-  color: var(--color-black);
-  border: 1px solid #ffffff;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: 1px solid var(--color-accent);
 }
 
 .btn--primary:hover {
   background: transparent;
-  color: #ffffff;
-  border-color: rgb(255 255 255 / 0.5);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
 .btn--ghost {
   background: transparent;
-  color: #ffffff;
-  border: 1px solid rgb(255 255 255 / 0.3);
+  color: var(--color-text);
+  border: 1px solid rgba(217, 218, 220, 0.3);
 }
 
 .btn--ghost:hover {
-  background: rgb(255 255 255 / 0.1);
-  border-color: rgb(255 255 255 / 0.6);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-color: var(--color-accent);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
@@ -672,7 +679,7 @@ button {
 
 .hero__greeting {
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   font-weight: 500;
   margin-bottom: 0.75rem;
   letter-spacing: 0.05em;
@@ -683,7 +690,7 @@ button {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 1.2rem + 4vw, 3.5rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-text);
   line-height: 1.1;
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
@@ -694,7 +701,7 @@ button {
   font-family: var(--font-serif);
   font-size: clamp(1.125rem, 0.9rem + 1.2vw, 1.5rem);
   font-weight: 600;
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   margin-bottom: 1.75rem;
   display: flex;
   align-items: center;
@@ -703,7 +710,7 @@ button {
 
 .hero__description {
   font-size: clamp(0.9375rem, 0.875rem + 0.3vw, 1.0625rem);
-  color: rgb(255 255 255 / 0.75);
+  color: rgba(217, 218, 220, 0.75);
   max-width: 65ch;
   margin-bottom: 2.25rem;
   line-height: 1.75;
@@ -729,15 +736,15 @@ button {
   height: 44px;
   border-radius: 50%;
   border: 1px solid rgb(255 255 255 / 0.2);
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   font-size: 1.125rem;
   transition: var(--transition);
 }
 
 .hero__social-link:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--color-black);
+  background: var(--color-accent);
+  border-color: var(--color-text);
+  color: var(--color-bg);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -798,7 +805,7 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: rgb(255 255 255 / 0.65);
+  color: rgba(217, 218, 220, 0.65);
   font-size: 0.8125rem;
   animation: bounce 2s infinite;
 }
@@ -814,7 +821,7 @@ button {
   right: 10%;
   font-family: 'Fira Code', monospace;
   font-size: 1rem;
-  color: rgb(255 255 255 / 0.06);
+  color: rgba(217, 218, 220, 0.06);
   pointer-events: none;
   user-select: none;
 }
@@ -827,7 +834,7 @@ button {
 .typewriter__cursor {
   font-weight: 300;
   animation: blink 1s step-end infinite;
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
 }
 
 @keyframes blink {
@@ -853,19 +860,19 @@ button {
   cursor: pointer;
   touch-action: manipulation;
   min-height: 44px;
-  -webkit-tap-highlight-color: rgb(255 255 255 / 0.1);
+  -webkit-tap-highlight-color: rgba(217, 218, 220, 0.1);
 }
 
 .services__card:hover {
   transform: translateY(-6px);
-  border-color: rgb(255 255 255 / 0.2);
+  border-color: rgba(217, 218, 220, 0.2);
   background: rgb(255 255 255 / 0.08);
   box-shadow: 0 12px 40px rgb(0 0 0 / 0.3);
 }
 
 .services__icon {
   font-size: 2.5rem;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 1.25rem;
   opacity: 0.9;
 }
@@ -874,13 +881,13 @@ button {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 0.875rem;
 }
 
 .services__card-text {
   font-size: 0.9375rem;
-  color: rgb(255 255 255 / 0.65);
+  color: rgba(217, 218, 220, 0.65);
   line-height: 1.7;
 }
 
@@ -896,12 +903,12 @@ button {
   font-family: var(--font-serif);
   font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 1.25rem;
 }
 
 .about__text {
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
   margin-bottom: 1rem;
   line-height: 1.8;
   max-width: 75ch;
@@ -916,7 +923,7 @@ button {
 .about__skill-category {
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0.875rem;
@@ -938,7 +945,7 @@ button {
   border: 1px solid rgb(255 255 255 / 0.15);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
-  color: rgb(255 255 255 / 0.8);
+  color: rgba(217, 218, 220, 0.8);
   transition: var(--transition);
 }
 
@@ -950,9 +957,9 @@ button {
 }
 
 .about__skill-item:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--color-black);
+  background: var(--color-accent);
+  border-color: var(--color-text);
+  color: var(--color-bg);
   transform: translateY(-2px);
 }
 
@@ -976,7 +983,7 @@ button {
 .portfolio__card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
-  border-color: rgb(255 255 255 / 0.25);
+  border-color: rgba(217, 218, 220, 0.25);
   background: rgb(255 255 255 / 0.07);
 }
 
@@ -992,12 +999,12 @@ button {
   font-family: var(--font-serif);
   font-size: 1.375rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 0.875rem;
 }
 
 .portfolio__card-description {
-  color: rgb(255 255 255 / 0.65);
+  color: rgba(217, 218, 220, 0.65);
   font-size: 0.9375rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
@@ -1016,7 +1023,7 @@ button {
   background: rgb(255 255 255 / 0.08);
   border-radius: var(--radius-sm);
   font-size: 0.75rem;
-  color: rgb(255 255 255 / 0.75);
+  color: rgba(217, 218, 220, 0.75);
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -1033,12 +1040,12 @@ button {
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgb(255 255 255 / 0.75);
+  color: rgba(217, 218, 220, 0.75);
   transition: color 0.3s ease;
 }
 
 .portfolio__link:hover {
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 /* Flip Card */
@@ -1090,7 +1097,7 @@ button {
 .portfolio__card-back {
   transform: rotateY(180deg);
   background: rgb(255 255 255 / 0.07);
-  border-color: rgb(255 255 255 / 0.2);
+  border-color: rgba(217, 218, 220, 0.2);
 }
 
 /* ===== RESUME ===== */
@@ -1110,14 +1117,14 @@ button {
   gap: 0.875rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 2rem;
   padding-bottom: 0.875rem;
   border-bottom: 1px solid rgb(255 255 255 / 0.12);
 }
 
 .resume__section-title .icon {
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
 }
 
 .resume__timeline {
@@ -1156,14 +1163,14 @@ button {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--color-accent);
   border: 3px solid rgb(18 18 18 / 0.8);
   box-shadow: 0 0 12px rgb(255 255 255 / 0.3);
 }
 
 .resume__item:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgb(255 255 255 / 0.25);
+  border-color: rgba(217, 218, 220, 0.25);
   background: rgb(255 255 255 / 0.07);
 }
 
@@ -1179,19 +1186,19 @@ button {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .resume__item-company {
   font-size: 0.9375rem;
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   margin-top: 0.375rem;
 }
 
 .resume__item-period {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: rgb(255 255 255 / 0.85);
+  color: rgba(217, 218, 220, 0.85);
   white-space: nowrap;
   padding: 0.375rem 0.875rem;
   background: rgb(255 255 255 / 0.08);
@@ -1210,7 +1217,7 @@ button {
   position: relative;
   padding-left: 1.5rem;
   font-size: 0.9375rem;
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
   line-height: 1.7;
 }
 
@@ -1227,7 +1234,7 @@ button {
 
 .resume__item-details {
   font-size: 0.9375rem;
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
   line-height: 1.7;
   margin-top: 0.5rem;
 }
@@ -1261,7 +1268,7 @@ button {
   border-radius: 50%;
   background: rgb(255 255 255 / 0.06);
   border: 1px solid rgb(255 255 255 / 0.15);
-  color: rgb(255 255 255 / 0.75);
+  color: rgba(217, 218, 220, 0.75);
   font-size: 1.125rem;
   flex-shrink: 0;
 }
@@ -1269,7 +1276,7 @@ button {
 .contact__info-title {
   font-size: 0.75rem;
   font-weight: 600;
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.375rem;
@@ -1277,12 +1284,12 @@ button {
 
 .contact__info-value {
   font-size: 1rem;
-  color: rgb(255 255 255 / 0.85);
+  color: rgba(217, 218, 220, 0.85);
   transition: color 0.3s ease;
 }
 
 a.contact__info-value:hover {
-  color: #ffffff;
+  color: var(--color-text);
   text-decoration: underline;
 }
 
@@ -1300,15 +1307,15 @@ a.contact__info-value:hover {
   height: 44px;
   border-radius: 50%;
   border: 1px solid rgb(255 255 255 / 0.2);
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   font-size: 1.125rem;
   transition: var(--transition);
 }
 
 .contact__social-link:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: var(--color-black);
+  background: var(--color-accent);
+  border-color: var(--color-text);
+  color: var(--color-bg);
   transform: translateY(-2px);
 }
 
@@ -1338,7 +1345,7 @@ a.contact__info-value:hover {
 .contact__label {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: rgb(255 255 255 / 0.75);
+  color: rgba(217, 218, 220, 0.75);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -1354,19 +1361,19 @@ a.contact__info-value:hover {
   border-radius: var(--radius-md);
   font-size: max(16px, 1rem);
   font-family: inherit;
-  color: #ffffff;
+  color: var(--color-text);
   background: rgb(255 255 255 / 0.05);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact__input:focus {
   outline: none;
-  border-color: rgb(255 255 255 / 0.4);
+  border-color: rgba(217, 218, 220, 0.4);
   box-shadow: 0 0 0 3px rgb(255 255 255 / 0.06);
 }
 
 .contact__input::placeholder {
-  color: rgb(255 255 255 / 0.35);
+  color: rgba(217, 218, 220, 0.35);
 }
 
 .contact__textarea {
@@ -1379,7 +1386,7 @@ a.contact__info-value:hover {
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(255 255 255 / 0.4);
+  color: rgba(217, 218, 220, 0.4);
   display: none;
 }
 
@@ -1478,19 +1485,19 @@ a.contact__info-value:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   font-size: 1.25rem;
   transition: var(--transition);
 }
 
 .modal__close:hover {
   background: rgb(255 255 255 / 0.1);
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .modal__icon {
   font-size: 3rem;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
   opacity: 0.9;
 }
@@ -1499,13 +1506,13 @@ a.contact__info-value:hover {
   font-family: var(--font-serif);
   font-size: 1.75rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
 .modal__text {
   font-size: 1rem;
-  color: rgb(255 255 255 / 0.7);
+  color: rgba(217, 218, 220, 0.7);
   line-height: 1.7;
 }
 
@@ -1516,7 +1523,7 @@ a.contact__info-value:hover {
     rgb(0 0 0 / 0) 0%,
     rgb(10 10 10 / 0.9) 70%
   );
-  color: rgb(255 255 255 / 0.6);
+  color: rgba(217, 218, 220, 0.6);
   padding: 3rem max(1.5rem, env(safe-area-inset-right)) max(2rem, env(safe-area-inset-bottom)) max(1.5rem, env(safe-area-inset-left));
   text-align: center;
 }
@@ -1536,7 +1543,7 @@ a.contact__info-value:hover {
   background: rgb(255 255 255 / 0.08);
   backdrop-filter: blur(12px);
   border: 1px solid rgb(255 255 255 / 0.15);
-  color: rgb(255 255 255 / 0.85);
+  color: rgba(217, 218, 220, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1547,7 +1554,7 @@ a.contact__info-value:hover {
   z-index: 999;
   box-shadow: 0 6px 20px rgb(0 0 0 / 0.3);
   touch-action: manipulation;
-  -webkit-tap-highlight-color: rgb(255 255 255 / 0.1);
+  -webkit-tap-highlight-color: rgba(217, 218, 220, 0.1);
 }
 
 .back-to-top--visible {
@@ -1557,7 +1564,7 @@ a.contact__info-value:hover {
 
 .back-to-top:hover {
   background: rgb(255 255 255 / 0.15);
-  color: #ffffff;
+  color: var(--color-text);
   transform: translateY(-4px);
 }
 
@@ -1568,10 +1575,11 @@ a.contact__info-value:hover {
   left: var(--sidenav-width);
   right: 0;
   height: 3px;
-  background: linear-gradient(to right, rgb(255 255 255 / 0.8), #ffffff);
+  background: linear-gradient(to right, rgba(255, 199, 60, 0.8), var(--color-accent));
   width: 0%;
   z-index: 9999;
   transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(255, 199, 60, 0.4);
 }
 
 /* ===== FLOATING PARTICLES ===== */
@@ -1934,12 +1942,12 @@ a.contact__info-value:hover {
 
   /* Keep border/background changes on touch, just not transforms */
   .services__card:active {
-    border-color: rgb(255 255 255 / 0.2);
+    border-color: rgba(217, 218, 220, 0.2);
     background: rgb(255 255 255 / 0.08);
   }
 
   .portfolio__card:active {
-    border-color: rgb(255 255 255 / 0.25);
+    border-color: rgba(217, 218, 220, 0.25);
     background: rgb(255 255 255 / 0.07);
   }
 }
